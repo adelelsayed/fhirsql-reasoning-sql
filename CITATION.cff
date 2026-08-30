@@ -1,0 +1,92 @@
+cff-version: 1.2.0
+message: "If you use this code, dataset, or paper, please cite it as below."
+title: "Plan-Then-Compile: Structured Reasoning Traces for FHIR-to-SQL Fine-Tuning"
+type: software
+version: 1.0.0
+date-released: "2026-08-30"
+license: CC-BY-4.0
+repository-code: "https://github.com/adelelsayed/fhirsql-reasoning-sql"
+abstract: >-
+  A fine-tuning study on translating natural-language hospital questions into
+  DuckDB SQL against a FHIR-derived schema, building on a prior study
+  (Elsayed 2026a, "From Frozen to Fluent") by retargeting SFT and DAPO/GRPO
+  RL to produce a structured JSON query plan followed by the compiled SQL,
+  in one continuous completion, giving RL a genuine reasoning trace to
+  refine rather than a single flat SQL guess. Across three seeds, SFT lifts
+  structural query-plan correctness from 0% (frozen base model) to 99.6% on
+  familiar clinical concepts and 82.1% on concepts never seen in training,
+  eliminates terminology-hardcoding entirely via an explicit reward penalty
+  (0.0% vs. the frozen model's 3.0-3.4%), and reaches perfect abstention
+  precision/recall (100%/100%). A subsequent DAPO/GRPO RL stage again shows
+  no measurable gain over SFT -- the same finding as the prior study, now
+  replicated under a design built specifically to give RL a reasoning trace
+  to work with, strengthening rather than merely repeating the result. A
+  database-verified error analysis attributes 78% of residual unseen-concept
+  failures to a single benign surface-form pattern (over-applying a SNOMED
+  CT qualifier-suffix convention to concepts coded in other terminology
+  systems), not diffuse reasoning failure.
+authors:
+  - family-names: "Elsayed"
+    given-names: "Adel"
+    orcid: "https://orcid.org/0009-0009-2892-1200"
+keywords:
+  - text-to-SQL
+  - large language models
+  - parameter-efficient fine-tuning
+  - DoRA
+  - LoRA
+  - reinforcement learning
+  - GRPO
+  - DAPO
+  - chain-of-thought
+  - structured reasoning
+  - FHIR
+  - clinical data
+  - synthetic health data
+  - Synthea
+  - DuckDB
+identifiers:
+  - type: url
+    value: "https://github.com/adelelsayed/fhirsql-reasoning-sql"
+    description: Source code repository
+references:
+  - type: software
+    title: "From Frozen to Fluent: DoRA Fine-Tuning for Reliable, Generalizing FHIR-to-SQL Generation"
+    authors:
+      - family-names: "Elsayed"
+        given-names: "Adel"
+        orcid: "https://orcid.org/0009-0009-2892-1200"
+    year: 2026
+    doi: "10.5281/zenodo.21988210"
+    notes: "The prior, flat-question-to-SQL study this work responds to and builds on."
+  - type: article
+    title: "Synthea: An approach, method, and software mechanism for generating synthetic patients and the synthetic electronic health care record"
+    authors:
+      - name: "Walonoski J, Kramer M, Nichols J, Quina A, Moesel C, Hall D, Duffett C, Dube K, Gallagher T, McLachlan S"
+    journal: "Journal of the American Medical Informatics Association"
+    year: 2018
+    doi: "10.1093/jamia/ocx079"
+  - type: article
+    title: "DoRA: Weight-Decomposed Low-Rank Adaptation"
+    authors:
+      - name: "Liu SY, Wang CY, Yin H, Molchanov P, Wang YCF, Cheng KT, Chen MH"
+    year: 2024
+    doi: "10.48550/arXiv.2402.09353"
+  - type: article
+    title: "DAPO: An Open-Source LLM Reinforcement Learning System at Scale"
+    authors:
+      - name: "Yu Q, Zhang Z, Zhu R, Yuan Y, Zuo X, Yue Y, Fan T, Liu G, Liu L, Liu X, et al."
+    year: 2025
+    doi: "10.48550/arXiv.2503.14476"
+  - type: article
+    title: "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models"
+    authors:
+      - name: "Shao Z, Wang P, Zhu Q, Xu R, Song J, Bi X, Zhang H, Zhang M, Li YK, Wu Y, Guo D"
+    year: 2024
+    doi: "10.48550/arXiv.2402.03300"
+  - type: article
+    title: "Qwen2.5-Coder Technical Report"
+    authors:
+      - name: "Hui B, Yang J, Cui Z, et al."
+    year: 2024
+    doi: "10.48550/arXiv.2409.12186"

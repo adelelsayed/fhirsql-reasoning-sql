@@ -1,0 +1,163 @@
+[start] loading SFT best checkpoint as RL starting point: /content/drive/MyDrive/projects/FHIRSQL/sft_outputs/seed_43/best
+[sampler] cycle 1 starting -- full 8992-row pool reshuffled, every instance sampled at least once so far
+[seed43] step 1/200 | reward 1.005 | kept 9/10 (90%) | exec nan (best -inf@0) | exact nan | 364s
+    peek | Q: 'Show benign neoplasm of bones of skull and face diagnosis counts split out by patient ethnicity.'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Benign neoplasm of bones of skull and face",\n      "d'  (reward=1.00)
+[seed43] step 2/200 | reward 0.981 | kept 10/10 (100%) | exec nan (best -inf@0) | exact nan | 420s
+    peek | Q: 'Of the patients flagged with a allergic disposition allergy, how many are also anemic?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'allergy' "
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Allergic disposition (finding)",\n      "domain": "all'  (reward=1.03)
+[seed43] step 3/200 | reward 1.008 | kept 8/10 (80%) | exec nan (best -inf@0) | exact nan | 394s
+    peek | Q: 'Show patients with 3 or more asthma follow-up encounters within a single year -- possible high utili'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'encounter"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Asthma follow-up (regime/therapy)",\n      "domain": "'  (reward=1.00)
+[seed43] step 4/200 | reward 1.003 | kept 8/10 (80%) | exec nan (best -inf@0) | exact nan | 347s
+    peek | Q: 'Of the patients with impacted teeth, how many were age 65 or above at diagnosis?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Impacted teeth",\n      "domain": "condition",\n      "'  (reward=1.00)
+[seed43] step 5/200 | reward 1.003 | kept 8/10 (80%) | exec nan (best -inf@0) | exact nan | 397s
+    peek | Q: 'How many of my patients have been diagnosed with history of appendectomy?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "History of appendectomy (situation)",\n      "domain":'  (reward=1.00)
+[seed43] step 6/200 | reward 1.004 | kept 9/10 (90%) | exec nan (best -inf@0) | exact nan | 595s
+    peek | Q: 'Who are the patients that have a completed closed reduction of mandibular fracture in their record?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'procedure"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Closed reduction of mandibular fracture (procedure)",'  (reward=1.00)
+[seed43] step 7/200 | reward 1.006 | kept 9/10 (90%) | exec nan (best -inf@0) | exact nan | 354s
+    peek | Q: 'How does the history of appendectomy patient count break down by race?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "History of appendectomy (situation)",\n      "domain":'  (reward=1.03)
+[seed43] step 8/200 | reward 1.003 | kept 10/10 (100%) | exec nan (best -inf@0) | exact nan | 466s
+    peek | Q: "How many ketones [Presence] in Urine by Test strip readings came back above 0.0, and what's their av"
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'observati"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Ketones [Presence] in Urine by Test strip",\n      "do'  (reward=1.00)
+[seed43] step 9/200 | reward 1.013 | kept 8/10 (80%) | exec nan (best -inf@0) | exact nan | 431s
+    peek | Q: 'Show the 5 patients who were oldest at the time of their first malignant neoplasm of pharynx, unspec'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Malignant neoplasm of pharynx, unspecified",\n      "d'  (reward=1.00)
+[seed43] step 10/200 | reward 1.004 | kept 10/10 (100%) | exec 0.995 (best 0.995@10) | exact 0.982 | 2293s
+    peek | Q: 'Give me the number of patients whose awaiting transplantation of kidney is currently active.'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Awaiting transplantation of kidney (situation)",\n    '  (reward=1.00)
+[seed43] step 11/200 | reward 1.004 | kept 14/20 (70%) | exec nan (best 0.995@10) | exact nan | 793s
+    peek | Q: 'How many procedures, on average, do our radicular cyst patients receive?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Radicular cyst",\n      "domain": "condition",\n      "'  (reward=1.00)
+[seed43] step 12/200 | reward 1.003 | kept 8/10 (80%) | exec nan (best 0.995@10) | exact nan | 535s
+    peek | Q: 'For postoperative follow-up visit encounters, how many are in each status -- finished, in-progress, '
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'encounter"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Postoperative follow-up visit (procedure)",\n      "do'  (reward=1.02)
+[seed43] step 13/200 | reward 1.006 | kept 8/10 (80%) | exec nan (best 0.995@10) | exact nan | 438s
+    peek | Q: 'How does the metabolic syndrome X patient count break down by ethnicity?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Metabolic syndrome X (disorder)",\n      "domain": "co'  (reward=1.00)
+[seed43] step 14/200 | reward 1.004 | kept 17/20 (85%) | exec nan (best 0.995@10) | exact nan | 810s
+    peek | Q: 'How many male versus female patients have a recurrent rectal polyp diagnosis?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Recurrent rectal polyp (disorder)",\n      "domain": "'  (reward=1.00)
+[seed43] step 15/200 | reward 1.006 | kept 9/10 (90%) | exec nan (best 0.995@10) | exact nan | 401s
+    peek | Q: 'How many patients on our list have fracture of clavicle marked as still active?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Fracture of clavicle (disorder)",\n      "domain": "co'  (reward=1.00)
+[seed43] step 16/200 | reward 1.005 | kept 8/10 (80%) | exec nan (best 0.995@10) | exact nan | 439s
+    peek | Q: 'List every patient with a currently active NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector prescr'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'medicatio"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",\n'  (reward=1.00)
+[seed43] step 17/200 | reward 1.005 | kept 10/10 (100%) | exec nan (best 0.995@10) | exact nan | 463s
+    peek | Q: 'On average, how many encounters does a patient with sprain of wrist have?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Sprain of wrist (disorder)",\n      "domain": "conditi'  (reward=1.01)
+[seed43] step 18/200 | reward 1.004 | kept 8/10 (80%) | exec nan (best 0.995@10) | exact nan | 425s
+    peek | Q: 'Which doctors are diagnosing the most perennial allergic rhinitis with seasonal variation cases? Sho'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Perennial allergic rhinitis with seasonal variation ('  (reward=1.00)
+[seed43] step 19/200 | reward 1.002 | kept 8/10 (80%) | exec nan (best 0.995@10) | exact nan | 401s
+    peek | Q: 'Of all the tear of meniscus of knee diagnoses, how many have actually resolved?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Tear of meniscus of knee (disorder)",\n      "domain":'  (reward=1.00)
+[seed43] step 20/200 | reward 0.971 | kept 9/10 (90%) | exec 0.995 (best 0.995@10) | exact 0.982 | 2366s
+    peek | Q: 'Of patients with elevated globulin [Mass/volume] in Serum by calculation, above 3.1, how many are pr'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'observati"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Globulin [Mass/volume] in Serum by calculation",\n    '  (reward=1.00)
+[seed43] step 21/200 | reward 1.008 | kept 9/10 (90%) | exec nan (best 0.995@10) | exact nan | 369s
+    peek | Q: 'Of the patients with benign neoplasm of other parts of mouth, how many were age 65 or above at diagn'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Benign neoplasm of other parts of mouth",\n      "doma'  (reward=1.00)
+[seed43] step 22/200 | reward 1.005 | kept 15/20 (75%) | exec nan (best 0.995@10) | exact nan | 971s
+    peek | Q: 'On average, what lymphocytes/Leukocytes in Blood by Automated count are we seeing across the patient'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'observati"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Lymphocytes/Leukocytes in Blood by Automated count",\n'  (reward=1.00)
+[seed43] step 23/200 | reward 1.004 | kept 10/10 (100%) | exec nan (best 0.995@10) | exact nan | 453s
+    peek | Q: 'Of the patients with gingivitis, how many were age 65 or above at diagnosis?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Gingivitis (disorder)",\n      "domain": "condition",\n'  (reward=1.00)
+[seed43] step 24/200 | reward 1.006 | kept 9/10 (90%) | exec nan (best 0.995@10) | exact nan | 353s
+    peek | Q: 'How many procedures, on average, do our osteoporotic fracture of bone patients receive?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Osteoporotic fracture of bone (disorder)",\n      "dom'  (reward=1.01)
+[seed43] step 25/200 | reward 1.005 | kept 14/20 (70%) | exec nan (best 0.995@10) | exact nan | 753s
+    peek | Q: 'Total number of humiliation, Afraid, Rape, and Kick questionnaire [HARK] documentation reports we ha'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'diagnosti"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Humiliation, Afraid, Rape, and Kick questionnaire [HA'  (reward=1.00)
+[seed43] step 26/200 | reward 1.005 | kept 10/10 (100%) | exec nan (best 0.995@10) | exact nan | 462s
+    peek | Q: 'Show patients where a colonoscopy occurred within 90 days after their history of myocardial infarcti'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "History of myocardial infarction (situation)",\n      '  (reward=1.00)
+[seed43] step 27/200 | reward 1.002 | kept 8/10 (80%) | exec nan (best 0.995@10) | exact nan | 420s
+    peek | Q: "Give me each hypertensive patient's newest logMAR visual acuity left eye (observable entity) reading"
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'observati"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "LogMAR visual acuity left eye (observable entity)",\n '  (reward=1.00)
+[seed43] step 28/200 | reward 1.004 | kept 8/10 (80%) | exec nan (best 0.995@10) | exact nan | 366s
+    peek | Q: 'How has the average cobb angle (observable entity) trended by year across our patients?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'observati"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Cobb angle (observable entity)",\n      "domain": "obs'  (reward=1.04)
+[seed43] step 29/200 | reward 1.003 | kept 16/20 (80%) | exec nan (best 0.995@10) | exact nan | 788s
+    peek | Q: 'List the 5 patients with the most recurrences of a cough diagnosis.'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Cough (finding)",\n      "domain": "condition",\n      '  (reward=1.00)
+[seed43] step 30/200 | reward 1.005 | kept 8/10 (80%) | exec 0.995 (best 0.995@10) | exact 0.982 | 2458s
+    peek | Q: 'How does the concussion injury of brain patient count break down by race?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Concussion injury of brain (disorder)",\n      "domain'  (reward=1.00)
+[seed43] step 31/200 | reward 1.006 | kept 9/10 (90%) | exec nan (best 0.995@10) | exact nan | 450s
+    peek | Q: 'How many anemic patients also have a sulfamethoxazole / Trimethoprim allergy noted?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'allergy' "
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Sulfamethoxazole / Trimethoprim",\n      "domain": "al'  (reward=1.00)
+[seed43] step 32/200 | reward 1.003 | kept 8/10 (80%) | exec nan (best 0.995@10) | exact nan | 395s
+    peek | Q: 'What encounter class is most associated with acetaminophen 325 MG Oral Tablet [Tylenol] prescription'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'medicatio"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Acetaminophen 325 MG Oral Tablet [Tylenol]",\n      "d'  (reward=1.00)
+[seed43] step 33/200 | reward 1.003 | kept 9/10 (90%) | exec nan (best 0.995@10) | exact nan | 366s
+    peek | Q: 'How many patients had a white oak IgE Ab [Units/volume] in Serum reading above 0.3, and what was the'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'observati"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "White oak IgE Ab [Units/volume] in Serum",\n      "dom'  (reward=1.00)
+[seed43] step 34/200 | reward 1.002 | kept 9/10 (90%) | exec nan (best 0.995@10) | exact nan | 344s
+    peek | Q: "For patients diagnosed with benign neoplasm of other parts of mouth, what's the average number of pr"
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Benign neoplasm of other parts of mouth",\n      "doma'  (reward=1.00)
+[seed43] step 35/200 | reward 1.003 | kept 9/10 (90%) | exec nan (best 0.995@10) | exact nan | 452s
+    peek | Q: 'What is the mean walnut IgE Ab [Units/volume] in Serum recorded across all patients, and in what uni'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'observati"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Walnut IgE Ab [Units/volume] in Serum",\n      "domain'  (reward=1.01)
+[seed43] step 36/200 | reward 1.004 | kept 10/10 (100%) | exec nan (best 0.995@10) | exact nan | 447s
+    peek | Q: "What's the difference between each patient's first and last body Height?"
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'observati"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Body Height",\n      "domain": "observation",\n      "t'  (reward=1.00)
+[seed43] step 37/200 | reward 1.005 | kept 9/10 (90%) | exec nan (best 0.995@10) | exact nan | 459s
+    peek | Q: 'On average, what iron saturation [Mass Fraction] in Serum or Plasma are we seeing across the patient'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'observati"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Iron saturation [Mass Fraction] in Serum or Plasma",\n'  (reward=1.00)
+[seed43] step 38/200 | reward 1.006 | kept 10/10 (100%) | exec nan (best 0.995@10) | exact nan | 461s
+    peek | Q: 'How many admission to surgical transplant department visits have taken place in total?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'encounter"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Admission to surgical transplant department (procedur'  (reward=1.01)
+[seed43] step 39/200 | reward 0.940 | kept 8/10 (80%) | exec nan (best 0.995@10) | exact nan | 398s
+    peek | Q: "What's the average body weight of patients who have recurrent rectal polyp?"
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Recurrent rectal polyp (disorder)",\n      "domain": "'  (reward=1.00)
+[seed43] step 40/200 | reward 1.005 | kept 9/10 (90%) | exec 0.995 (best 0.995@10) | exact 0.982 | 2348s
+    peek | Q: 'Can you tell me the count of patients who have transformed migraine recorded in their chart?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Transformed migraine (disorder)",\n      "domain": "co'  (reward=1.00)
+[seed43] early stopping at step 40 -- no improvement in 3 eval checks (30 steps), best exec-match 0.995 @ step 10

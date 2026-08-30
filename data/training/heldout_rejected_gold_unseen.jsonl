@@ -1,0 +1,1 @@
+{"archetype_id": "t1_list_patients_on_medication", "concept": "saquinavir mesylate 500 MG Oral Tablet", "reason": "empty_result", "sql": "SELECT DISTINCT patient_id\n            FROM medication_request\n            WHERE code = '859863' AND system = 'http://www.nlm.nih.gov/research/umls/rxnorm' AND status = 'active'"}

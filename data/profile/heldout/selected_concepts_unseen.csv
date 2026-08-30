@@ -1,0 +1,88 @@
+table_name,code,code_system,display,row_count,distinct_patient_count
+condition,C7B.1,http://hl7.org/fhir/sid/icd-10,Secondary Merkel cell carcinoma,3,3
+condition,K00.1,http://hl7.org/fhir/sid/icd-10,Supernumerary teeth,2,2
+procedure,D7671,http://www.ada.org/cdt,"alveolus - open reduction, may include stabilization of teeth",2,2
+procedure,D3331,http://www.ada.org/cdt,treatment of root canal obstruction; non-surgical access,2,2
+condition,K08.133,http://hl7.org/fhir/sid/icd-10,"Complete loss of teeth due to caries, class III",2,2
+condition,K08.492,http://hl7.org/fhir/sid/icd-10,"Partial loss of teeth due to other specified cause, class II",2,2
+condition,C31.1,http://hl7.org/fhir/sid/icd-10,Malignant neoplasm of ethmoidal sinus,2,2
+procedure,1155885007,http://snomed.info/sct,Repair of aortic valve (procedure),2,2
+condition,C83.38,http://hl7.org/fhir/sid/icd-10,"Diffuse large B-cell lymphoma, lymph nodes of multiple sites",2,2
+condition,C34.1,http://hl7.org/fhir/sid/icd-10,"Malignant neoplasm of upper lobe, bronchus or lung",2,2
+condition,K11.0,http://hl7.org/fhir/sid/icd-10,Atrophy of salivary gland,2,2
+condition,K11.23,http://hl7.org/fhir/sid/icd-10,Chronic sialoadenitis,2,2
+procedure,D6980,http://www.ada.org/cdt,fixed partial denture repair necessitated by restorative material failure,2,2
+condition,200936003,http://snomed.info/sct,Lupus erythematosus (disorder),1,1
+condition,C49.0,http://hl7.org/fhir/sid/icd-10,"Malignant neoplasm of connective and soft tissue of head, face and neck",1,1
+condition,C44.69,http://hl7.org/fhir/sid/icd-10,"Other specified malignant neoplasm of skin of upper limb, including shoulder",1,1
+condition,K08.424,http://hl7.org/fhir/sid/icd-10,"Partial loss of teeth due to periodontal diseases, class IV",1,1
+condition,K11.22,http://hl7.org/fhir/sid/icd-10,Acute recurrent sialoadenitis,1,1
+condition,K08.121,http://hl7.org/fhir/sid/icd-10,"Complete loss of teeth due to periodontal diseases, class I",1,1
+condition,S02.40CA,http://hl7.org/fhir/sid/icd-10,"Maxillary fracture, right side, initial encounter for closed fracture",1,1
+condition,C85.80,http://hl7.org/fhir/sid/icd-10,"Other specified types of non-Hodgkin lymphoma, unspecified site",1,1
+condition,S02.641D,http://hl7.org/fhir/sid/icd-10,"Fracture of ramus of right mandible, subsequent encounter for fracture with routine healing",1,1
+condition,S02.671A,http://hl7.org/fhir/sid/icd-10,"Fracture of alveolus of right mandible, initial encounter for closed fracture",1,1
+condition,Z13.83,http://hl7.org/fhir/sid/icd-10,Encounter for screening for respiratory disorder NEC,1,1
+condition,D00.06,http://hl7.org/fhir/sid/icd-10,Carcinoma in situ of floor of mouth,1,1
+condition,D04.3,http://hl7.org/fhir/sid/icd-10,Carcinoma in situ of skin of other and unspecified parts of face,1,1
+condition,S02.5XXG,http://hl7.org/fhir/sid/icd-10,"Fracture of tooth (traumatic), subsequent encounter for fracture with delayed healing",1,1
+condition,S02.66XB,http://hl7.org/fhir/sid/icd-10,"Fracture of symphysis of mandible, initial encounter for open fracture",1,1
+condition,S02.610A,http://hl7.org/fhir/sid/icd-10,"Fracture of condylar process of mandible, unspecified side, initial encounter for closed fracture",1,1
+condition,C54.1,http://hl7.org/fhir/sid/icd-10,Malignant neoplasm of endometrium,1,1
+condition,D04.0,http://hl7.org/fhir/sid/icd-10,Carcinoma in situ of skin of lip,1,1
+condition,C69.52,http://hl7.org/fhir/sid/icd-10,Malignant neoplasm of left lacrimal gland and duct,1,1
+condition,D04.9,http://hl7.org/fhir/sid/icd-10,"Carcinoma in situ of skin, unspecified",1,1
+condition,K08.413,http://hl7.org/fhir/sid/icd-10,"Partial loss of teeth due to trauma, class III",1,1
+condition,K05.221,http://hl7.org/fhir/sid/icd-10,"Aggressive periodontitis, generalized, slight",1,1
+condition,D29.1,http://hl7.org/fhir/sid/icd-10,Benign neoplasm of prostate,1,1
+condition,C13.2,http://hl7.org/fhir/sid/icd-10,Malignant neoplasm of posterior wall of hypopharynx,1,1
+condition,K08.104,http://hl7.org/fhir/sid/icd-10,"Complete loss of teeth, unspecified cause, class IV",1,1
+condition,D18.02,http://hl7.org/fhir/sid/icd-10,Hemangioma of intracranial structures,1,1
+medication_request,213432,http://www.nlm.nih.gov/research/umls/rxnorm,telmisartan 80 MG Oral Tablet [Micardis],1,1
+medication_request,200094,http://www.nlm.nih.gov/research/umls/rxnorm,irbesartan 75 MG Oral Tablet,1,1
+medication_request,859863,http://www.nlm.nih.gov/research/umls/rxnorm,saquinavir mesylate 500 MG Oral Tablet,2,1
+medication_request,746815,http://www.nlm.nih.gov/research/umls/rxnorm,60 ACTUAT mometasone furoate 0.22 MG/ACTUAT Dry Powder Inhaler [Asmanex],13,1
+procedure,D5919,http://www.ada.org/cdt,facial prosthesis,1,1
+procedure,D2663,http://www.ada.org/cdt,onlay  resinbased composite  three surfaces,1,1
+procedure,D3460,http://www.ada.org/cdt,endodontic endosseous implant,1,1
+procedure,D7858,http://www.ada.org/cdt,joint reconstruction,1,1
+procedure,D6940,http://www.ada.org/cdt,stress breaker,1,1
+procedure,D0423,http://www.ada.org/cdt,genetic test for susceptibility to diseases - specimen analysis,1,1
+procedure,D6973,http://www.ada.org/cdt,D6973,1,1
+procedure,D0480,http://www.ada.org/cdt,"accession of exfoliative cytologic smears, microscopic examination, preparation and transmission of written report",1,1
+procedure,445528004,http://snomed.info/sct,Treatment changed (situation),1,1
+procedure,13569004,http://snomed.info/sct,Transfusion of plasma (procedure),1,1
+procedure,D5670,http://www.ada.org/cdt,replace all teeth and acrylic on cast metal framework maxillary,1,1
+procedure,D2955,http://www.ada.org/cdt,post removal,1,1
+procedure,D0251,http://www.ada.org/cdt,extra-oral posterior dental radiographic image,1,1
+condition,120991000119102,http://snomed.info/sct,History of undergoing in utero procedure while a fetus (situation),1,1
+condition,K06.02,http://hl7.org/fhir/sid/icd-10,"Gingival recession, generalized",1,1
+condition,K03.7,http://hl7.org/fhir/sid/icd-10,Posteruptive color changes of dental hard tissues,1,1
+condition,D10.5,http://hl7.org/fhir/sid/icd-10,Benign neoplasm of other parts of oropharynx,1,1
+condition,715843008,http://snomed.info/sct,Localised slight aggressive periodontitis,1,1
+condition,Z00.121,http://hl7.org/fhir/sid/icd-10,Encounter for routine child health examination with abnormal findings,1,1
+condition,C93.10,http://hl7.org/fhir/sid/icd-10,Chronic myelomonocytic leukemia not having achieved remission,1,1
+condition,K06.01,http://hl7.org/fhir/sid/icd-10,"Gingival recession, localized",1,1
+condition,C88.0,http://hl7.org/fhir/sid/icd-10,Waldenström macroglobulinemia,1,1
+condition,K13.1,http://hl7.org/fhir/sid/icd-10,Cheek and lip biting,1,1
+condition,D48.1,http://hl7.org/fhir/sid/icd-10,Neoplasm of uncertain behavior of connective and other soft tissue,1,1
+condition,C7A.8,http://hl7.org/fhir/sid/icd-10,Other malignant neuroendocrine tumors,1,1
+procedure,D5992,http://www.ada.org/cdt,"adjust maxillofacial prosthetic appliance, by report",1,1
+medication_request,979473,http://www.nlm.nih.gov/research/umls/rxnorm,hydrochlorothiazide 25 MG / losartan potassium 100 MG Oral Tablet [Hyzaar],1,1
+condition,C4A.30,http://hl7.org/fhir/sid/icd-10,Merkel cell carcinoma of unspecified part of face,1,1
+condition,C44.319,http://hl7.org/fhir/sid/icd-10,Basal cell carcinoma of skin of other parts of face,1,1
+procedure,D5955,http://www.ada.org/cdt,"palatal lift prosthesis, definitive",1,1
+condition,M26.33,http://hl7.org/fhir/sid/icd-10,Horizontal displacement of fully erupted tooth or teeth,1,1
+condition,D07.5,http://hl7.org/fhir/sid/icd-10,Carcinoma in situ of prostate,1,1
+procedure,D8220,http://www.ada.org/cdt,fixed appliance therapy,1,1
+procedure,D6192,http://www.ada.org/cdt,semi-precision attachment - placement,1,1
+condition,S02.401B,http://hl7.org/fhir/sid/icd-10,"Maxillary fracture, unspecified side, initial encounter for open fracture",1,1
+condition,D00.03,http://hl7.org/fhir/sid/icd-10,Carcinoma in situ of gingiva and edentulous alveolar ridge,1,1
+procedure,D7982,http://www.ada.org/cdt,sialodochoplasty,1,1
+procedure,D1201,http://www.ada.org/cdt,D1201,1,1
+condition,K06.011,http://hl7.org/fhir/sid/icd-10,"Localized gingival recession, minimal",1,1
+condition,D14.1,http://hl7.org/fhir/sid/icd-10,Benign neoplasm of larynx,1,1
+condition,Z00.8,http://hl7.org/fhir/sid/icd-10,Encounter for other general examination,1,1
+condition,D23.39,http://hl7.org/fhir/sid/icd-10,Other benign neoplasm of skin of other parts of face,1,1
+condition,S02.621,http://hl7.org/fhir/sid/icd-10,Fracture of subcondylar process of right mandible,1,1
+medication_request,205304,http://www.nlm.nih.gov/research/umls/rxnorm,telmisartan 40 MG Oral Tablet,1,1

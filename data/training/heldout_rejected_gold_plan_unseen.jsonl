@@ -1,0 +1,11 @@
+{"archetype_id": "t1_count_patients_with_condition", "concept": "Complete loss of teeth due to periodontal diseases, class I", "reason": "lookup_ambiguous"}
+{"archetype_id": "t1_count_patients_with_condition", "concept": "Carcinoma in situ of prostate", "reason": "lookup_ambiguous"}
+{"archetype_id": "t1_list_patients_on_medication", "concept": "saquinavir mesylate 500 MG Oral Tablet", "reason": "empty_result", "sql": "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'medication_request' AND display ILIKE '%saquinavir mesylate 500 MG Oral Tablet%'\n            )\n            SELECT DISTINCT patient_id\n            FROM medication_request, resolved\n            WHERE medication_request.code = resolved.code AND medication_request.system = resolved.code_system\n              AND status = 'active'"}
+{"archetype_id": "t1_list_patients_with_procedure", "concept": "facial prosthesis", "reason": "lookup_ambiguous"}
+{"archetype_id": "t2_active_condition_count", "concept": "Complete loss of teeth due to periodontal diseases, class I", "reason": "lookup_ambiguous"}
+{"archetype_id": "t2_active_condition_count", "concept": "Carcinoma in situ of prostate", "reason": "lookup_ambiguous"}
+{"archetype_id": "t2_resolved_condition_count", "concept": "Complete loss of teeth due to periodontal diseases, class I", "reason": "lookup_ambiguous"}
+{"archetype_id": "t2_resolved_condition_count", "concept": "Carcinoma in situ of prostate", "reason": "lookup_ambiguous"}
+{"archetype_id": "t2_condition_diagnoses_by_year", "concept": "Complete loss of teeth due to periodontal diseases, class I", "reason": "lookup_ambiguous"}
+{"archetype_id": "t2_condition_diagnoses_by_year", "concept": "Carcinoma in situ of prostate", "reason": "lookup_ambiguous"}
+{"archetype_id": "t2_procedure_by_year", "concept": "facial prosthesis", "reason": "lookup_ambiguous"}

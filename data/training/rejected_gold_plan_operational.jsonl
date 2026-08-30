@@ -1,0 +1,24 @@
+{"archetype_id": "doctor_top5_by_encounter_type", "concept": "Hospital admission (procedure)", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_by_encounter_type", "concept": "Emergency hospital admission (procedure)", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_by_encounter_type", "concept": "Follow-up visit (procedure)", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_prescribers", "concept": "Acetaminophen 325 MG Oral Tablet", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_prescribers", "concept": "Hydrochlorothiazide 25 MG Oral Tablet", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_prescribers", "concept": "lisinopril 20 MG Oral Tablet", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_prescribers", "concept": "atorvastatin 40 MG Oral Tablet", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_prescribers", "concept": "24 HR metoprolol succinate 25 MG Extended Release Oral Tablet", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_prescribers", "concept": "24 HR metoprolol succinate 50 MG Extended Release Oral Tablet", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_prescribers", "concept": "atorvastatin 10 MG Oral Tablet", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_prescribers", "concept": "losartan potassium 100 MG Oral Tablet", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_prescribers", "concept": "metoprolol tartrate 50 MG Oral Tablet", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_prescribers", "concept": "pravastatin sodium 40 MG Oral Tablet", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_by_condition_diagnosed", "concept": "Fracture of bone (disorder)", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_by_condition_diagnosed", "concept": "Sinusitis (disorder)", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_by_condition_diagnosed", "concept": "Cracked tooth", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_by_condition_diagnosed", "concept": "Dental caries on smooth surface penetrating into dentin", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_by_condition_diagnosed", "concept": "Retained dental root", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_by_condition_diagnosed", "concept": "Chronic periodontitis, generalized", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_by_condition_diagnosed", "concept": "Gingival enlargement", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_by_condition_diagnosed", "concept": "Dental caries on smooth surface limited to enamel", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_by_condition_diagnosed", "concept": "Temporomandibular joint disorder, unspecified", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_by_condition_diagnosed", "concept": "Shock (disorder)", "reason": "lookup_ambiguous"}
+{"archetype_id": "doctor_top5_by_condition_diagnosed", "concept": "Cracked tooth", "reason": "lookup_ambiguous"}

@@ -1,0 +1,10 @@
+{
+  "val_loss": 0.8798848634289804,
+  "val_perplexity": 2.4106221396712892,
+  "val_token_acc": 0.8147678762006404,
+  "gen_exact_match": 0.0,
+  "gen_exec_match": 0.16,
+  "gen_abstention_precision": 0.4444444444444444,
+  "gen_abstention_recall": 0.8,
+  "computed_in_seconds": 445.33511757850647
+}

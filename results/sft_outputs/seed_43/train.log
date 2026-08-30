@@ -1,0 +1,4 @@
+[seed43] ep 1/2 | tr 0.0144 | val 0.0006 (best 0.0006@1) | ppl 1.00 | tok-acc 0.9998 | exact 0.982 | exec 1.000 | abst P/R 1.00/1.00 | 21132s
+[resume] loading adapter weights from /content/drive/MyDrive/projects/FHIRSQL/sft_outputs/seed_43/last
+[resume] training state loaded, resuming from epoch 2
+[seed43] ep 2/2 | tr 0.0001 | val 0.0004 (best 0.0004@2) | ppl 1.00 | tok-acc 0.9999 | exact 1.000 | exec 1.000 | abst P/R 1.00/1.00 | 21092s

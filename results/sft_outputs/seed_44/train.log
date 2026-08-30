@@ -1,0 +1,2 @@
+[seed44] ep 1/2 | tr 0.0143 | val 0.0004 (best 0.0004@1) | ppl 1.00 | tok-acc 0.9999 | exact 1.000 | exec 1.000 | abst P/R 1.00/1.00 | 21078s
+[seed44] ep 2/2 | tr 0.0001 | val 0.0002 (best 0.0002@2) | ppl 1.00 | tok-acc 1.0000 | exact 1.000 | exec 1.000 | abst P/R 1.00/1.00 | 21090s

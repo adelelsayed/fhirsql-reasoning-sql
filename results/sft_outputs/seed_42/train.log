@@ -1,0 +1,5 @@
+[seed42] ep 1/3 | tr 0.0160 | val 0.0016 (best 0.0016@1) | ppl 1.00 | tok-acc 0.9998 | exact 1.000 | exec 1.000 | abst P/R 1.00/1.00 | 21129s
+[seed42] ep 2/3 | tr 0.0002 | val 0.0003 (best 0.0003@2) | ppl 1.00 | tok-acc 0.9999 | exact 1.000 | exec 1.000 | abst P/R 1.00/1.00 | 21146s
+[seed42] epoch 2 improved 78.0% over epoch 1 (>= 5.0% threshold) -- continuing to epoch 3
+[resume] loading adapter weights from /content/drive/MyDrive/projects/FHIRSQL/sft_outputs/seed_42/last
+[resume] training state loaded, resuming from epoch 3

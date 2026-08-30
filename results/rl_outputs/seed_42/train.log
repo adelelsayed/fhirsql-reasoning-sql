@@ -1,0 +1,170 @@
+[start] loading SFT best checkpoint as RL starting point: /content/drive/MyDrive/projects/FHIRSQL/sft_outputs/seed_42/best
+[sampler] cycle 1 starting -- full 8992-row pool reshuffled, every instance sampled at least once so far
+[seed42] step 1/200 | reward 1.002 | kept 10/10 (100%) | exec nan (best -inf@0) | exact nan | 440s
+    peek | Q: 'How many general examination of patient visits have taken place in total?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'encounter"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "General examination of patient (procedure)",\n      "d'  (reward=1.00)
+[seed42] step 2/200 | reward 1.009 | kept 10/10 (100%) | exec nan (best -inf@0) | exact nan | 455s
+    peek | Q: 'List the top 5 physicians by telemedicine consultation with patient encounter volume.'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'encounter"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Telemedicine consultation with patient (procedure)",\n'  (reward=1.08)
+[seed42] step 3/200 | reward 1.004 | kept 10/10 (100%) | exec nan (best -inf@0) | exact nan | 448s
+    peek | Q: 'Give me the prescription status distribution for {7 (inert ingredients 1 MG Oral Tablet) / 21 (mestr'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'medicatio"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "{7 (inert ingredients 1 MG Oral Tablet) / 21 (mestran'  (reward=1.00)
+[seed42] step 4/200 | reward 1.004 | kept 8/10 (80%) | exec nan (best -inf@0) | exact nan | 422s
+    peek | Q: 'Top 5 patients by count of nitrofurantoin, macrocrystals 25 MG / nitrofurantoin, monohydrate 75 MG ['
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'medicatio"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "nitrofurantoin, macrocrystals 25 MG / nitrofurantoin,'  (reward=1.00)
+[seed42] step 5/200 | reward 1.004 | kept 9/10 (90%) | exec nan (best -inf@0) | exact nan | 362s
+    peek | Q: 'How many new childhood asthma diagnoses were recorded each year?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Childhood asthma (disorder)",\n      "domain": "condit'  (reward=1.00)
+[seed42] step 6/200 | reward 1.003 | kept 9/10 (90%) | exec nan (best -inf@0) | exact nan | 374s
+    peek | Q: 'Show me penicillin V Potassium 250 MG Oral Tablet prescription volume by year.'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'medicatio"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Penicillin V Potassium 250 MG Oral Tablet",\n      "do'  (reward=1.00)
+[seed42] step 7/200 | reward 1.007 | kept 10/10 (100%) | exec nan (best -inf@0) | exact nan | 382s
+    peek | Q: 'How does the sprain of wrist patient count break down by ethnicity?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Sprain of wrist (disorder)",\n      "domain": "conditi'  (reward=1.00)
+[seed42] step 8/200 | reward 1.005 | kept 15/20 (75%) | exec nan (best -inf@0) | exact nan | 815s
+    peek | Q: "What's the criticality distribution for patients flagged with a tree pollen allergy?"
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'allergy' "
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Tree pollen (substance)",\n      "domain": "allergy",\n'  (reward=1.00)
+[seed42] step 9/200 | reward 1.005 | kept 10/10 (100%) | exec nan (best -inf@0) | exact nan | 377s
+    peek | Q: 'How many patients in our system have a cough diagnosis on file?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Cough (finding)",\n      "domain": "condition",\n      '  (reward=1.00)
+[seed42] step 10/200 | reward 1.004 | kept 15/20 (75%) | exec 1.000 (best 1.000@10) | exact 1.000 | 1379s
+    peek | Q: 'Who are the top 5 patients by number of recorded deposits [accretions] on teeth diagnoses?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Deposits [accretions] on teeth",\n      "domain": "con'  (reward=1.01)
+[seed42] step 11/200 | reward 1.003 | kept 8/10 (80%) | exec nan (best 1.000@10) | exact nan | 429s
+    peek | Q: 'Who were the oldest 5 patients when first diagnosed with benign neoplasm of lower jaw bone, and how '
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Benign neoplasm of lower jaw bone",\n      "domain": "'  (reward=1.00)
+[seed42] step 12/200 | reward 1.004 | kept 9/10 (90%) | exec nan (best 1.000@10) | exact nan | 435s
+    peek | Q: 'List the top 5 oldest ages at first childhood asthma diagnosis, by patient.'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Childhood asthma (disorder)",\n      "domain": "condit'  (reward=1.00)
+[seed42] step 13/200 | reward 1.004 | kept 9/10 (90%) | exec nan (best 1.000@10) | exact nan | 368s
+    peek | Q: 'Which patients currently have an active prescription for 21 DAY ethinyl estradiol 0.000625 MG/HR / e'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'medicatio"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "21 DAY ethinyl estradiol 0.000625 MG/HR / etonogestre'  (reward=1.00)
+[resume] loading RL adapter weights from /content/drive/MyDrive/projects/FHIRSQL/rl_outputs/with_efficiency/seed_42/last
+[resume] sampler state restored (cycle 1, position 140/8992)
+[resume] training state loaded, resuming from step 13
+[seed42] step 13/200 | reward 1.003 | kept 8/10 (80%) | exec nan (best 1.000@10) | exact nan | 362s
+    peek | Q: 'Which patients currently have an active prescription for 21 DAY ethinyl estradiol 0.000625 MG/HR / e'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'medicatio"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "21 DAY ethinyl estradiol 0.000625 MG/HR / etonogestre'  (reward=1.02)
+[seed42] step 14/200 | reward 1.006 | kept 10/10 (100%) | exec nan (best 1.000@10) | exact nan | 550s
+    peek | Q: "What's the average time between a patient's osteoporotic fracture of bone diagnosis and their first "
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Osteoporotic fracture of bone (disorder)",\n      "dom'  (reward=1.00)
+[seed42] step 15/200 | reward 1.005 | kept 10/10 (100%) | exec nan (best 1.000@10) | exact nan | 373s
+    peek | Q: "For white oak IgE Ab [Units/volume] in Serum over 0.3, how many are there and what's the average val"
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'observati"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "White oak IgE Ab [Units/volume] in Serum",\n      "dom'  (reward=1.00)
+[seed42] step 16/200 | reward 1.004 | kept 17/20 (85%) | exec nan (best 1.000@10) | exact nan | 847s
+    peek | Q: 'List the 5 physicians with the most history of coronary artery bypass grafting diagnoses attributed '
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "History of coronary artery bypass grafting (situation'  (reward=1.00)
+[seed42] step 17/200 | reward 1.003 | kept 16/20 (80%) | exec nan (best 1.000@10) | exact nan | 778s
+    peek | Q: "What's the count and average of honey bee IgE Ab [Units/volume] in Serum results exceeding 0.3?"
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'observati"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Honey bee IgE Ab [Units/volume] in Serum",\n      "dom'  (reward=1.00)
+[seed42] step 18/200 | reward 1.004 | kept 9/10 (90%) | exec nan (best 1.000@10) | exact nan | 446s
+    peek | Q: 'How many encounters, on average, do benign neoplasm of other parts of mouth patients accumulate?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Benign neoplasm of other parts of mouth",\n      "doma'  (reward=1.00)
+[seed42] step 19/200 | reward 1.005 | kept 8/10 (80%) | exec nan (best 1.000@10) | exact nan | 434s
+    peek | Q: 'Show sore throat diagnosis counts split out by patient ethnicity.'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Sore throat (finding)",\n      "domain": "condition",\n'  (reward=1.00)
+[seed42] step 20/200 | reward 1.004 | kept 10/10 (100%) | exec 0.991 (best 1.000@10) | exact 0.986 | 2377s
+    peek | Q: 'Year by year, how many sprain (morphologic abnormality) cases were newly diagnosed?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Sprain (morphologic abnormality)",\n      "domain": "c'  (reward=1.00)
+[seed42] step 21/200 | reward 1.005 | kept 9/10 (90%) | exec nan (best 1.000@10) | exact nan | 402s
+    peek | Q: "What's the monthly count of HIV status tests conducted?"
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'observati"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "HIV status",\n      "domain": "observation",\n      "te'  (reward=1.02)
+[seed42] step 22/200 | reward 1.006 | kept 8/10 (80%) | exec nan (best 1.000@10) | exact nan | 433s
+    peek | Q: 'Top 5 doctors ranked by count of allergic disorder follow-up assessment encounters -- who are they?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'encounter"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Allergic disorder follow-up assessment (regime/therap'  (reward=1.05)
+[seed42] step 23/200 | reward 1.004 | kept 10/10 (100%) | exec nan (best 1.000@10) | exact nan | 441s
+    peek | Q: 'Among patients diagnosed with laceration of foot, what is their mean recorded body weight?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Laceration of foot (disorder)",\n      "domain": "cond'  (reward=1.00)
+[seed42] step 24/200 | reward 0.979 | kept 10/10 (100%) | exec nan (best 1.000@10) | exact nan | 379s
+    peek | Q: "What's the racial breakdown of patients diagnosed with unspecified atrophy of edentulous alveolar ri"
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Unspecified atrophy of edentulous alveolar ridge",\n  '  (reward=1.00)
+[seed42] step 25/200 | reward 1.006 | kept 8/10 (80%) | exec nan (best 1.000@10) | exact nan | 426s
+    peek | Q: 'List every patient with a currently active alendronic acid 10 MG Oral Tablet prescription.'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'medicatio"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Alendronic acid 10 MG Oral Tablet",\n      "domain": "'  (reward=1.01)
+[seed42] step 26/200 | reward 1.009 | kept 8/10 (80%) | exec nan (best 1.000@10) | exact nan | 441s
+    peek | Q: 'Who are the patients that have a completed removal of impacted tooth completely bony with unusual su'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'procedure"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "removal of impacted tooth  completely bony with unusu'  (reward=1.00)
+[seed42] step 27/200 | reward 0.977 | kept 9/10 (90%) | exec nan (best 1.000@10) | exact nan | 451s
+    peek | Q: 'Show perennial allergic rhinitis diagnosis counts split out by patient ethnicity.'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Perennial allergic rhinitis (disorder)",\n      "domai'  (reward=1.00)
+[seed42] step 28/200 | reward 1.006 | kept 8/10 (80%) | exec nan (best 1.000@10) | exact nan | 441s
+    peek | Q: 'How many patients on verapamil hydrochloride 80 MG Oral Tablet [Calan] also have a hypertension diag'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'medicatio"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "verapamil hydrochloride 80 MG Oral Tablet [Calan]",\n '  (reward=1.02)
+[seed42] step 29/200 | reward 1.004 | kept 9/10 (90%) | exec nan (best 1.000@10) | exact nan | 368s
+    peek | Q: 'Give me the prescription status distribution for diphenhydrAMINE Hydrochloride 25 MG Oral Tablet.'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'medicatio"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet",\n   '  (reward=1.00)
+[seed42] step 30/200 | reward 1.005 | kept 8/10 (80%) | exec 0.991 (best 1.000@10) | exact 0.986 | 2279s
+    peek | Q: "For patients diagnosed with perennial allergic rhinitis with seasonal variation, what's the average "
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Perennial allergic rhinitis with seasonal variation ('  (reward=1.01)
+[seed42] step 31/200 | reward 1.005 | kept 8/10 (80%) | exec nan (best 1.000@10) | exact nan | 361s
+    peek | Q: 'Show acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet] prescription counts'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'medicatio"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG '  (reward=1.00)
+[seed42] step 32/200 | reward 1.003 | kept 8/10 (80%) | exec nan (best 1.000@10) | exact nan | 445s
+    peek | Q: "For our laceration of foot patients, what's their average weight?"
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Laceration of foot (disorder)",\n      "domain": "cond'  (reward=1.01)
+[seed42] step 33/200 | reward 1.007 | kept 8/10 (80%) | exec nan (best 1.000@10) | exact nan | 438s
+    peek | Q: 'How many sleep disorder patients were seniors, 65 or older, at the time of diagnosis?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Sleep disorder (disorder)",\n      "domain": "conditio'  (reward=1.01)
+[seed42] step 34/200 | reward 1.006 | kept 13/20 (65%) | exec nan (best 1.000@10) | exact nan | 986s
+    peek | Q: 'Break down perennial allergic rhinitis with seasonal variation cases by race.'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Perennial allergic rhinitis with seasonal variation ('  (reward=1.00)
+[seed42] step 35/200 | reward 1.005 | kept 8/10 (80%) | exec nan (best 1.000@10) | exact nan | 350s
+    peek | Q: "What's the average number of visits or encounters for our respiratory distress patients?"
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Respiratory distress (finding)",\n      "domain": "con'  (reward=1.00)
+[seed42] step 36/200 | reward 1.005 | kept 10/10 (100%) | exec nan (best 1.000@10) | exact nan | 451s
+    peek | Q: 'Of the sepsis patients, who had a colonoscopy performed within 3 months of diagnosis?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Sepsis (disorder)",\n      "domain": "condition",\n    '  (reward=1.00)
+[seed42] step 37/200 | reward 1.005 | kept 16/20 (80%) | exec nan (best 1.000@10) | exact nan | 792s
+    peek | Q: 'What encounter types are associated with sealant per tooth, and how many each?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'procedure"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "sealant  per tooth",\n      "domain": "procedure",\n   '  (reward=1.00)
+[seed42] step 38/200 | reward 1.007 | kept 16/20 (80%) | exec nan (best 1.000@10) | exact nan | 842s
+    peek | Q: 'How many patients in our system have a encounter for general adult medical examination without abnor'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'condition"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Encounter for general adult medical examination witho'  (reward=1.00)
+[seed42] step 39/200 | reward 1.003 | kept 10/10 (100%) | exec nan (best 1.000@10) | exact nan | 371s
+    peek | Q: 'In which encounter types is intubation being performed, and how often?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'procedure"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "Intubation (procedure)",\n      "domain": "procedure",'  (reward=1.01)
+[seed42] step 40/200 | reward 1.005 | kept 15/20 (75%) | exec 0.991 (best 1.000@10) | exact 0.986 | 2879s
+    peek | Q: 'On average, how old are patients when they get a resin-based composite - one surface, posterior?'
+    peek | gold: "WITH resolved AS (\n                SELECT code, code_system FROM valuesets\n                WHERE table_name = 'procedure"
+    peek | pred: '{\n  "entities": [\n    {\n      "role": "primary",\n      "concept": "resin-based composite - one surface, posterior",\n    '  (reward=1.03)
+[seed42] early stopping at step 40 -- no improvement in 3 eval checks (30 steps), best exec-match 1.000 @ step 10

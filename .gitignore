@@ -1,0 +1,46 @@
+# Raw Synthea installation and generated output -- multi-GB, regenerable via
+# scripts/run_train_batches.ps1 / run_heldout_batches.ps1 with the seeds logged
+# in METHODOLOGY_LOG.md. Never belongs in git.
+synthea/synthea-with-dependencies.jar
+synthea/output/
+
+# Flattened DuckDB + Parquet artifacts -- regenerable via scripts/flatten_to_duckdb.py.
+# Also multi-GB; large binary data does not belong in git history.
+data/*.duckdb
+data/parquet/
+
+# data/profile/ is NOT ignored -- small CSVs (row counts, fill rates, concept bank)
+# supporting the paper's data-quality claims.
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Encoding-fix temp files, in case a run is interrupted mid-write
+*.fixtmp
+
+# Local AI coding assistant config, not part of the research artifact
+.claude/
+
+# Session-handoff snapshot for resuming work with a fresh assistant session --
+# operational tooling, not a research artifact. METHODOLOGY_LOG.md (the actual
+# diary/methodology notes) stays tracked; this file is just a "read me first"
+# pointer for continuity.
+PROJECT_STATUS.md
+scratch.ipynb
+
+# Pre-pivot day-1 planning doc (printed-to-PDF from an early markdown plan) --
+# superseded by PAPER.md/METHODOLOGY_LOG.md, excluded from the public release.
+fhirsql.pdf
+
+# Base model weights (28GB, downloaded from Hugging Face) -- never belongs in
+# git; referenced by name/version in the paper and CITATIONS.md instead.
+Qwen2.5-Coder-14B-Instruct/
+
+# Staging area for adapter weights uploaded to Hugging Face separately -- see
+# MODEL_CARD.md. Not committed to git.
+hf_staging/
+
+# Working notes, not part of the publication.
+notes/

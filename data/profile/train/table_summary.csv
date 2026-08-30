@@ -1,0 +1,11 @@
+table_name,row_count,distinct_patient_count
+patient,18999,18999
+condition,775813,18999
+observation,14393959,18999
+medication_request,1381065,18002
+encounter,1396066,18999
+procedure,3032773,18941
+immunization,289936,18947
+allergy,15938,3062
+careplan,66632,17204
+diagnostic_report,2981730,18999

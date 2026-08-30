@@ -1,0 +1,383 @@
+table_name,code,code_system,display,row_count,distinct_patient_count
+condition,66383009,http://snomed.info/sct,Gingivitis (disorder),30602,15074
+condition,422650009,http://snomed.info/sct,Social isolation (finding),22883,10057
+condition,706893006,http://snomed.info/sct,Victim of intimate partner abuse (finding),15044,8499
+condition,271737000,http://snomed.info/sct,Anemia (disorder),7111,7111
+condition,59621000,http://snomed.info/sct,Essential hypertension (disorder),5177,5177
+condition,82423001,http://snomed.info/sct,Chronic pain (finding),4098,4098
+condition,237602007,http://snomed.info/sct,Metabolic syndrome X (disorder),3680,3680
+condition,125605004,http://snomed.info/sct,Fracture of bone (disorder),3619,3183
+condition,127013003,http://snomed.info/sct,Disorder of kidney due to diabetes mellitus (disorder),2622,2622
+condition,384709000,http://snomed.info/sct,Sprain (morphologic abnormality),2714,2521
+condition,105531004,http://snomed.info/sct,Housing unsatisfactory (finding),2291,2291
+condition,399261000,http://snomed.info/sct,History of coronary artery bypass grafting (situation),2133,2133
+condition,267020005,http://snomed.info/sct,History of tubal ligation (situation),2024,2024
+condition,44465007,http://snomed.info/sct,Sprain of ankle (disorder),1903,1813
+condition,307426000,http://snomed.info/sct,Acute infective cystitis (disorder),1760,1649
+condition,266934004,http://snomed.info/sct,Transport problem (finding),1578,1578
+condition,399211009,http://snomed.info/sct,History of myocardial infarction (situation),1438,1438
+condition,110030002,http://snomed.info/sct,Concussion injury of brain (disorder),1367,1324
+condition,1187604002,http://snomed.info/sct,Serving in military service (finding),1150,1150
+condition,36971009,http://snomed.info/sct,Sinusitis (disorder),1085,1060
+condition,698306007,http://snomed.info/sct,Awaiting transplantation of kidney (situation),993,993
+condition,49727002,http://snomed.info/sct,Cough (finding),970,970
+condition,39898005,http://snomed.info/sct,Sleep disorder (disorder),958,958
+condition,428251008,http://snomed.info/sct,History of appendectomy (situation),903,903
+condition,39848009,http://snomed.info/sct,Whiplash injury to neck (disorder),900,878
+condition,70704007,http://snomed.info/sct,Sprain of wrist (disorder),811,793
+condition,58150001,http://snomed.info/sct,Fracture of clavicle (disorder),781,761
+condition,91302008,http://snomed.info/sct,Sepsis (disorder),669,669
+condition,78275009,http://snomed.info/sct,Obstructive sleep apnea syndrome (disorder),655,655
+condition,713197008,http://snomed.info/sct,Recurrent rectal polyp (disorder),626,626
+condition,263102004,http://snomed.info/sct,Fracture subluxation of wrist (disorder),633,618
+condition,284551006,http://snomed.info/sct,Laceration of foot (disorder),574,568
+condition,126906006,http://snomed.info/sct,Neoplasm of prostate (disorder),556,556
+condition,443165006,http://snomed.info/sct,Osteoporotic fracture of bone (disorder),665,541
+condition,92691004,http://snomed.info/sct,Carcinoma in situ of prostate (disorder),508,508
+condition,K03.81,http://hl7.org/fhir/sid/icd-10,Cracked tooth,511,490
+condition,707251008,http://snomed.info/sct,Generalised chronic periodontitis,452,448
+condition,233678006,http://snomed.info/sct,Childhood asthma (disorder),435,435
+condition,315268008,http://snomed.info/sct,Suspected prostate cancer (situation),513,407
+condition,403190006,http://snomed.info/sct,Epidermal burn of skin (disorder),383,380
+condition,87433001,http://snomed.info/sct,Pulmonary emphysema (disorder),354,354
+condition,K08.8,http://hl7.org/fhir/sid/icd-10,Other specified disorders of teeth and supporting structures,357,345
+condition,K01.1,http://hl7.org/fhir/sid/icd-10,Impacted teeth,333,323
+condition,1085991000119107,http://snomed.info/sct,Dental caries on smooth surface penetrating into dentin,321,315
+condition,446096008,http://snomed.info/sct,Perennial allergic rhinitis (disorder),302,302
+condition,33737001,http://snomed.info/sct,Fracture of rib (disorder),298,295
+condition,232353008,http://snomed.info/sct,Perennial allergic rhinitis with seasonal variation (disorder),286,286
+condition,K09.0,http://hl7.org/fhir/sid/icd-10,Developmental odontogenic cysts,284,276
+condition,K08.3,http://hl7.org/fhir/sid/icd-10,Retained dental root,279,271
+condition,1231000119100,http://snomed.info/sct,History of aortic valve replacement (situation),265,265
+condition,271825005,http://snomed.info/sct,Respiratory distress (finding),252,252
+condition,398254007,http://snomed.info/sct,Pre-eclampsia (disorder),253,235
+condition,K08.409,http://hl7.org/fhir/sid/icd-10,"Partial loss of teeth, unspecified cause, unspecified class",230,222
+condition,68962001,http://snomed.info/sct,Muscle pain (finding),213,213
+condition,S02.5XXA,http://hl7.org/fhir/sid/icd-10,"Fracture of tooth (traumatic), initial encounter for closed fracture",209,202
+condition,K03.6,http://hl7.org/fhir/sid/icd-10,Deposits [accretions] on teeth,201,194
+condition,267102003,http://snomed.info/sct,Sore throat (finding),186,186
+condition,M27.8,http://hl7.org/fhir/sid/icd-10,Other specified diseases of jaws,186,183
+condition,K02.7,http://hl7.org/fhir/sid/icd-10,Dental root caries,180,177
+condition,25064002,http://snomed.info/sct,Headache (finding),170,170
+condition,K04.4,http://hl7.org/fhir/sid/icd-10,Acute apical periodontitis of pulpal origin,170,168
+condition,K05.313,http://hl7.org/fhir/sid/icd-10,"Chronic periodontitis, localized, severe",160,159
+condition,65710008,http://snomed.info/sct,Acute respiratory failure (disorder),147,147
+condition,K05.32,http://hl7.org/fhir/sid/icd-10,"Chronic periodontitis, generalized",143,142
+condition,D16.5,http://hl7.org/fhir/sid/icd-10,Benign neoplasm of lower jaw bone,141,138
+condition,67782005,http://snomed.info/sct,Acute respiratory distress syndrome (disorder),132,132
+condition,262574004,http://snomed.info/sct,Bullet wound (disorder),129,129
+condition,Z00.00,http://hl7.org/fhir/sid/icd-10,Encounter for general adult medical examination without abnormal findings,129,125
+condition,427419006,http://snomed.info/sct,Transformed migraine (disorder),120,120
+condition,54711002,http://snomed.info/sct,Gingival enlargement,115,115
+condition,C32.1,http://hl7.org/fhir/sid/icd-10,Malignant neoplasm of supraglottis,114,113
+condition,K04.5,http://hl7.org/fhir/sid/icd-10,Chronic apical periodontitis,108,108
+condition,K05.311,http://hl7.org/fhir/sid/icd-10,"Chronic periodontitis, localized, slight",104,103
+condition,C14.0,http://hl7.org/fhir/sid/icd-10,"Malignant neoplasm of pharynx, unspecified",98,98
+condition,1085981000119109,http://snomed.info/sct,Dental caries on smooth surface limited to enamel,96,96
+condition,K13.21,http://hl7.org/fhir/sid/icd-10,"Leukoplakia of oral mucosa, including tongue",95,93
+condition,239720000,http://snomed.info/sct,Tear of meniscus of knee (disorder),90,89
+condition,K04.8,http://hl7.org/fhir/sid/icd-10,Radicular cyst,87,87
+condition,95417003,http://snomed.info/sct,Primary fibromyalgia syndrome (disorder),84,84
+condition,M26.60,http://hl7.org/fhir/sid/icd-10,"Temporomandibular joint disorder, unspecified",80,79
+condition,94503003,http://snomed.info/sct,Metastatic malignant neoplasm to prostate (disorder),74,74
+condition,267253006,http://snomed.info/sct,Fetus with chromosomal abnormality (disorder),73,73
+condition,K13.2,http://hl7.org/fhir/sid/icd-10,"Leukoplakia and other disturbances of oral epithelium, including tongue",71,71
+condition,D10.39,http://hl7.org/fhir/sid/icd-10,Benign neoplasm of other parts of mouth,69,69
+condition,K08.20,http://hl7.org/fhir/sid/icd-10,Unspecified atrophy of edentulous alveolar ridge,68,67
+condition,27942005,http://snomed.info/sct,Shock (disorder),66,66
+condition,D16.4,http://hl7.org/fhir/sid/icd-10,Benign neoplasm of bones of skull and face,63,62
+condition,C05.1,http://hl7.org/fhir/sid/icd-10,Malignant neoplasm of soft palate,60,59
+condition,263172003,http://snomed.info/sct,Fracture of mandible (disorder),53,53
+condition,109747007,http://snomed.info/sct,Cracked tooth,52,52
+observation,6690-2,http://loinc.org,Leukocytes [#/volume] in Blood by Automated count,73062,18999
+observation,8302-2,http://loinc.org,Body Height,310771,18999
+observation,85354-9,http://loinc.org,Blood Pressure panel with all children optional,343383,18999
+observation,72166-2,http://loinc.org,Tobacco smoking status,309893,18999
+observation,8867-4,http://loinc.org,Heart rate,315356,18999
+observation,786-4,http://loinc.org,MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count,73062,18999
+observation,70274-6,http://loinc.org,Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ],122697,15091
+observation,76504-0,http://loinc.org,Total score [HARK],71473,12995
+observation,2085-9,http://loinc.org,Cholesterol in HDL [Mass/volume] in Serum or Plasma,144508,12374
+observation,82667-7,http://loinc.org,Total score [DAST-10],71256,11981
+observation,6299-2,http://loinc.org,Urea Nitrogen [Mass/volume] in Blood,250968,9511
+observation,2947-0,http://loinc.org,Sodium [Moles/volume] in Blood,250968,9511
+observation,4548-4,http://loinc.org,Hemoglobin A1c/Hemoglobin.total in Blood,224946,8713
+observation,59460-6,http://loinc.org,Fall risk total [Morse Fall Scale],98960,6550
+observation,2885-2,http://loinc.org,Protein [Mass/volume] in Serum or Plasma,93930,5609
+observation,1751-7,http://loinc.org,Albumin [Mass/volume] in Serum or Plasma,93930,5609
+observation,2514-8,http://loinc.org,Ketones [Presence] in Urine by Test strip,212163,4598
+observation,5803-2,http://loinc.org,pH of Urine by Test strip,212163,4598
+observation,2160-0,http://loinc.org,Creatinine [Mass/volume] in Serum or Plasma,180131,4510
+observation,3094-0,http://loinc.org,Urea nitrogen [Mass/volume] in Serum or Plasma,180131,4510
+observation,17861-6,http://loinc.org,Calcium [Mass/volume] in Serum or Plasma,180131,4510
+observation,10834-0,http://loinc.org,Globulin [Mass/volume] in Serum by calculation,72492,4022
+observation,77606-2,http://loinc.org,Weight-for-length Per age and sex,37831,3875
+observation,25428-4,http://loinc.org,Glucose [Presence] in Urine by Test strip,210137,3299
+observation,34533-0,http://loinc.org,Odor of Urine,204651,2731
+observation,5797-6,http://loinc.org,Ketones [Mass/volume] in Urine by Test strip,206167,2731
+observation,89579-7,http://loinc.org,Troponin I.cardiac [Mass/volume] in Serum or Plasma by High sensitivity method,14629,2278
+observation,X9999-0,http://loinc.org,Operative Status,2093,2048
+observation,19123-9,http://loinc.org,Magnesium [Mass/volume] in Serum or Plasma,17795,1713
+observation,24124-0,http://loinc.org,Casts [Presence] in Urine sediment by Light microscopy,2026,1622
+observation,8247-9,http://loinc.org,Mucus [Presence] in Urine sediment by Light microscopy,2026,1622
+observation,3173-2,http://loinc.org,aPTT in Blood by Coagulation assay,6398,1510
+observation,71491-5,http://loinc.org,Right eye Diabetic retinopathy severity level by Ophthalmoscopy,18212,1478
+observation,413077008,http://snomed.info/sct,LogMAR visual acuity left eye (observable entity),17995,1473
+observation,57905-2,http://loinc.org,Hemoglobin.gastrointestinal.lower [Presence] in Stool by Immunoassay --1st specimen,1410,1356
+observation,6844-5,http://loinc.org,Honey bee IgE Ab [Units/volume] in Serum,1239,1067
+observation,6082-2,http://loinc.org,Codfish IgE Ab [Units/volume] in Serum,1239,1067
+observation,6248-9,http://loinc.org,Soybean IgE Ab [Units/volume] in Serum,1239,1067
+observation,6273-7,http://loinc.org,Walnut IgE Ab [Units/volume] in Serum,1239,1067
+observation,6189-5,http://loinc.org,White oak IgE Ab [Units/volume] in Serum,1239,1067
+observation,74006-8,http://loinc.org,Weight difference [Mass difference] --pre dialysis - post dialysis,296925,1009
+observation,1960-4,http://loinc.org,Bicarbonate [Moles/volume] in Arterial blood,8424,983
+observation,94040-3,http://loinc.org,Adenovirus A+B+C+D+E DNA [Presence] in Respiratory system specimen by NAA with probe detection,863,863
+observation,92131-2,http://loinc.org,Respiratory syncytial virus RNA [Presence] in Respiratory system specimen by NAA with probe detection,863,863
+observation,92134-6,http://loinc.org,Human metapneumovirus RNA [Presence] in Respiratory system specimen by NAA with probe detection,863,863
+observation,2502-3,http://loinc.org,Iron saturation [Mass Fraction] in Serum or Plasma,10875,861
+observation,33762-6,http://loinc.org,Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma,10881,861
+observation,3016-3,http://loinc.org,Thyrotropin [Units/volume] in Serum or Plasma,832,829
+observation,2027-1,http://loinc.org,"Carbon dioxide, total [Moles/volume] in Venous blood",822,820
+observation,14627-4,http://loinc.org,Bicarbonate [Moles/volume] in Venous blood,822,820
+observation,91148-7,http://loinc.org,"Pain intensity, Enjoyment of life, General activity scale [PEG]",1501,713
+observation,75636-1,http://loinc.org,Emergency severity index [ESI],647,596
+observation,80383-3,http://loinc.org,Influenza virus B Ag [Presence] in Upper respiratory specimen by Rapid immunoassay,542,542
+observation,2106-3,http://loinc.org,Choriogonadotropin [Presence] in Urine,455,429
+observation,706-2,http://loinc.org,Basophils/Leukocytes in Blood by Automated count,4124,415
+observation,704-7,http://loinc.org,Basophils [#/volume] in Blood by Automated count,4124,415
+observation,736-9,http://loinc.org,Lymphocytes/Leukocytes in Blood by Automated count,4124,415
+observation,46288-7,http://loinc.org,US Guidance for biopsy of Prostate,513,407
+observation,14804-9,http://loinc.org,Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Lactate to pyruvate reaction,1995,252
+observation,55277-8,http://loinc.org,HIV status,956,239
+observation,46240-8,http://loinc.org,History of Hospitalizations+Outpatient visits Narrative,956,239
+observation,32693-4,http://loinc.org,Lactate [Moles/volume] in Blood,379,185
+observation,44963-7,http://loinc.org,Capillary refill [Time] of Nail bed,184,184
+observation,85319-2,http://loinc.org,HER2 [Presence] in Breast cancer specimen by Immune stain,159,159
+observation,85318-4,http://loinc.org,ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH,159,159
+observation,59557-9,http://loinc.org,Treatment status Cancer,150,150
+observation,66534-9,http://loinc.org,Percentage area affected by eczema Lower extremity - bilateral [PhenX],142,142
+observation,44667-4,http://loinc.org,Site of distant metastasis in Breast tumor,136,136
+observation,70006-2,http://loinc.org,Medication management note,82,82
+observation,285285000,http://snomed.info/sct,Cobb angle (observable entity),73,73
+medication_request,313782,http://www.nlm.nih.gov/research/umls/rxnorm,Acetaminophen 325 MG Oral Tablet,9929,7714
+medication_request,866412,http://www.nlm.nih.gov/research/umls/rxnorm,24 HR metoprolol succinate 100 MG Extended Release Oral Tablet,4931,4931
+medication_request,849574,http://www.nlm.nih.gov/research/umls/rxnorm,Naproxen sodium 220 MG Oral Tablet,4170,3895
+medication_request,562251,http://www.nlm.nih.gov/research/umls/rxnorm,Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet,4189,3761
+medication_request,310798,http://www.nlm.nih.gov/research/umls/rxnorm,Hydrochlorothiazide 25 MG Oral Tablet,105436,2886
+medication_request,308136,http://www.nlm.nih.gov/research/umls/rxnorm,amLODIPine 2.5 MG Oral Tablet,99820,2746
+medication_request,313820,http://www.nlm.nih.gov/research/umls/rxnorm,Acetaminophen 160 MG Chewable Tablet,2892,2127
+medication_request,106892,http://www.nlm.nih.gov/research/umls/rxnorm,"insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]",140117,1845
+medication_request,1870230,http://www.nlm.nih.gov/research/umls/rxnorm,NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector,1602,1602
+medication_request,904419,http://www.nlm.nih.gov/research/umls/rxnorm,Alendronic acid 10 MG Oral Tablet,42002,1421
+medication_request,834061,http://www.nlm.nih.gov/research/umls/rxnorm,Penicillin V Potassium 250 MG Oral Tablet,1577,1338
+medication_request,855812,http://www.nlm.nih.gov/research/umls/rxnorm,prasugrel 10 MG Oral Tablet,1041,1041
+medication_request,860975,http://www.nlm.nih.gov/research/umls/rxnorm,24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet,52509,960
+medication_request,1664463,http://www.nlm.nih.gov/research/umls/rxnorm,24 HR tacrolimus 1 MG Extended Release Oral Tablet [Envarsus],24673,931
+medication_request,313988,http://www.nlm.nih.gov/research/umls/rxnorm,Furosemide 40 MG Oral Tablet,8560,856
+medication_request,757594,http://www.nlm.nih.gov/research/umls/rxnorm,{28 (norethindrone 0.35 MG Oral Tablet) } Pack [Jolivette 28 Day],1037,759
+medication_request,209387,http://www.nlm.nih.gov/research/umls/rxnorm,Acetaminophen 325 MG Oral Tablet [Tylenol],14244,716
+medication_request,751905,http://www.nlm.nih.gov/research/umls/rxnorm,{7 (ethinyl estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (ethinyl estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (ethinyl estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (inert ingredients 1 MG Oral Tablet) } Pack [Trinessa 28 Day],830,674
+medication_request,748962,http://www.nlm.nih.gov/research/umls/rxnorm,{28 (norethindrone 0.35 MG Oral Tablet) } Pack [Camila 28 Day],815,651
+medication_request,748856,http://www.nlm.nih.gov/research/umls/rxnorm,{24 (drospirenone 3 MG / ethinyl estradiol 0.02 MG Oral Tablet) / 4 (inert ingredients 1 MG Oral Tablet) } Pack [Yaz 28 Day],793,644
+medication_request,831533,http://www.nlm.nih.gov/research/umls/rxnorm,{28 (norethindrone 0.35 MG Oral Tablet) } Pack [Errin 28 Day],833,635
+medication_request,1049625,http://www.nlm.nih.gov/research/umls/rxnorm,Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet],13356,623
+medication_request,665078,http://www.nlm.nih.gov/research/umls/rxnorm,Loratadine 5 MG Chewable Tablet,548,548
+medication_request,314077,http://www.nlm.nih.gov/research/umls/rxnorm,lisinopril 20 MG Oral Tablet,3279,499
+medication_request,106258,http://www.nlm.nih.gov/research/umls/rxnorm,Hydrocortisone 10 MG/ML Topical Cream,529,483
+medication_request,1367439,http://www.nlm.nih.gov/research/umls/rxnorm,21 DAY ethinyl estradiol 0.000625 MG/HR / etonogestrel 0.005 MG/HR Vaginal System [NuvaRing],515,474
+medication_request,308182,http://www.nlm.nih.gov/research/umls/rxnorm,Amoxicillin 250 MG Oral Capsule,456,450
+medication_request,1049630,http://www.nlm.nih.gov/research/umls/rxnorm,diphenhydrAMINE Hydrochloride 25 MG Oral Tablet,409,409
+medication_request,1648755,http://www.nlm.nih.gov/research/umls/rxnorm,"nitrofurantoin, macrocrystals 25 MG / nitrofurantoin, monohydrate 75 MG Oral Capsule",385,340
+medication_request,198335,http://www.nlm.nih.gov/research/umls/rxnorm,sulfamethoxazole 800 MG / trimethoprim 160 MG Oral Tablet,368,336
+medication_request,1014676,http://www.nlm.nih.gov/research/umls/rxnorm,cetirizine hydrochloride 5 MG Oral Tablet,331,331
+medication_request,197604,http://www.nlm.nih.gov/research/umls/rxnorm,Digoxin 0.125 MG Oral Tablet,9814,290
+medication_request,897685,http://www.nlm.nih.gov/research/umls/rxnorm,verapamil hydrochloride 80 MG Oral Tablet [Calan],9492,286
+medication_request,1804799,http://www.nlm.nih.gov/research/umls/rxnorm,Alteplase 100 MG Injection,270,270
+medication_request,1534809,http://www.nlm.nih.gov/research/umls/rxnorm,168 HR Ethinyl Estradiol 0.00146 MG/HR / norelgestromin 0.00625 MG/HR Transdermal System,269,248
+medication_request,617311,http://www.nlm.nih.gov/research/umls/rxnorm,atorvastatin 40 MG Oral Tablet,245,245
+medication_request,1860154,http://www.nlm.nih.gov/research/umls/rxnorm,Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet,1186,226
+medication_request,351109,http://www.nlm.nih.gov/research/umls/rxnorm,budesonide 0.25 MG/ML Inhalation Suspension,4628,210
+medication_request,966222,http://www.nlm.nih.gov/research/umls/rxnorm,Levothyroxine Sodium 0.075 MG Oral Tablet,202,202
+medication_request,198014,http://www.nlm.nih.gov/research/umls/rxnorm,Naproxen 500 MG Oral Tablet,210,197
+medication_request,866427,http://www.nlm.nih.gov/research/umls/rxnorm,24 HR metoprolol succinate 25 MG Extended Release Oral Tablet,169,169
+medication_request,749882,http://www.nlm.nih.gov/research/umls/rxnorm,{7 (inert ingredients 1 MG Oral Tablet) / 21 (mestranol 0.05 MG / norethindrone 1 MG Oral Tablet) } Pack [Norinyl 1+50 28 Day],271,168
+medication_request,866436,http://www.nlm.nih.gov/research/umls/rxnorm,24 HR metoprolol succinate 50 MG Extended Release Oral Tablet,156,156
+medication_request,617312,http://www.nlm.nih.gov/research/umls/rxnorm,atorvastatin 10 MG Oral Tablet,153,153
+medication_request,896001,http://www.nlm.nih.gov/research/umls/rxnorm,120 ACTUAT fluticasone propionate 0.11 MG/ACTUAT Metered Dose Inhaler [Flovent],2742,131
+medication_request,235389,http://www.nlm.nih.gov/research/umls/rxnorm,Mestranol / Norethynodrel,250,130
+medication_request,979480,http://www.nlm.nih.gov/research/umls/rxnorm,losartan potassium 100 MG Oral Tablet,119,119
+medication_request,259255,http://www.nlm.nih.gov/research/umls/rxnorm,atorvastatin 80 MG Oral Tablet,115,115
+medication_request,749785,http://www.nlm.nih.gov/research/umls/rxnorm,{7 (ethinyl estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (ethinyl estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (ethinyl estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (inert ingredients 1 MG Oral Tablet) } Pack [Ortho Tri-Cyclen 28 Day],160,111
+medication_request,866514,http://www.nlm.nih.gov/research/umls/rxnorm,metoprolol tartrate 50 MG Oral Tablet,106,106
+medication_request,312938,http://www.nlm.nih.gov/research/umls/rxnorm,Sertraline 100 MG Oral Tablet,147,88
+medication_request,197380,http://www.nlm.nih.gov/research/umls/rxnorm,atenolol 25 MG Oral Tablet,86,86
+medication_request,1648756,http://www.nlm.nih.gov/research/umls/rxnorm,"nitrofurantoin, macrocrystals 25 MG / nitrofurantoin, monohydrate 75 MG [Macrobid]",81,81
+medication_request,617296,http://www.nlm.nih.gov/research/umls/rxnorm,amoxicillin 500 MG / clavulanate 125 MG Oral Tablet,74,73
+medication_request,197381,http://www.nlm.nih.gov/research/umls/rxnorm,atenolol 50 MG Oral Tablet,70,70
+medication_request,351266,http://www.nlm.nih.gov/research/umls/rxnorm,buprenorphine 2 MG / naloxone 0.5 MG Sublingual Tablet,2233,68
+medication_request,904475,http://www.nlm.nih.gov/research/umls/rxnorm,pravastatin sodium 40 MG Oral Tablet,66,66
+medication_request,1100184,http://www.nlm.nih.gov/research/umls/rxnorm,Donepezil hydrochloride 23 MG Oral Tablet,62,62
+medication_request,997223,http://www.nlm.nih.gov/research/umls/rxnorm,Donepezil hydrochloride 10 MG Oral Tablet,58,58
+medication_request,1359133,http://www.nlm.nih.gov/research/umls/rxnorm,{5 (ethinyl estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (ethinyl estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (ethinyl estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (ferrous fumarate 75 MG Oral Tablet) } Pack [Estrostep Fe 28 Day],68,55
+procedure,171207006,http://snomed.info/sct,Depression screening (procedure),389831,15458
+procedure,315639002,http://snomed.info/sct,Initial patient assessment (procedure),9185,6769
+procedure,D0602,http://www.ada.org/cdt,caries risk assessment and documentation with a finding of moderate risk,7168,4206
+procedure,63332003,http://snomed.info/sct,History AND physical examination (procedure),3712,3252
+procedure,84478008,http://snomed.info/sct,Occupational therapy (regime/therapy),7720,2616
+procedure,D2391,http://www.ada.org/cdt,"resin-based composite - one surface, posterior",2676,2251
+procedure,311555007,http://snomed.info/sct,Speech and language therapy regime (regime/therapy),3731,1867
+procedure,47758006,http://snomed.info/sct,Hepatitis B surface antigen measurement (procedure),3164,1761
+procedure,275833003,http://snomed.info/sct,Alpha-fetoprotein test - antenatal (procedure),3041,1730
+procedure,D2392,http://www.ada.org/cdt,"resin-based composite - two surfaces, posterior",1834,1585
+procedure,415070008,http://snomed.info/sct,Percutaneous coronary intervention,1553,1477
+procedure,386053000,http://snomed.info/sct,Evaluation procedure (procedure),1465,1241
+procedure,D1351,http://www.ada.org/cdt,sealant  per tooth,1211,1082
+procedure,306185001,http://snomed.info/sct,Referral to cardiac surgery service (procedure),1013,995
+procedure,52765003,http://snomed.info/sct,Intubation (procedure),914,909
+procedure,1263416007,http://snomed.info/sct,Removal of intrauterine contraceptive device (procedure),893,807
+procedure,D7310,http://www.ada.org/cdt,alveoloplasty in conjunction with extractions  four or more teeth or tooth spaces per quadrant,1057,717
+procedure,D0210,http://www.ada.org/cdt,intraoral  comprehensive series of radiographic images,688,658
+procedure,D0502,http://www.ada.org/cdt,other oral pathology procedures by report,691,644
+procedure,14736009,http://snomed.info/sct,History and physical examination with evaluation and management of patient (procedure),647,596
+procedure,410006001,http://snomed.info/sct,Digital examination of rectum (procedure),2896,530
+procedure,D7953,http://www.ada.org/cdt,bone replacement graft for ridge preservation  per site,575,489
+procedure,25656009,http://snomed.info/sct,"Physical examination, complete (procedure)",4919,444
+procedure,D7285,http://www.ada.org/cdt,"incisional biopsy of oral tissue-hard (bone, tooth)",568,379
+procedure,D1702,http://www.ada.org/cdt,Pfizer-BioNTech Covid-19 vaccine administration - second dose,327,314
+procedure,54550000,http://snomed.info/sct,Electroencephalogram (procedure),467,290
+procedure,237001001,http://snomed.info/sct,Augmentation of labor (procedure),269,256
+procedure,D3310,http://www.ada.org/cdt,endodontic therapy anterior tooth excluding final restoration,245,233
+procedure,305351004,http://snomed.info/sct,Admission to intensive care unit (procedure),266,209
+procedure,367494004,http://snomed.info/sct,Premature birth of newborn (finding),191,186
+procedure,122548005,http://snomed.info/sct,Biopsy of breast (procedure),159,159
+procedure,26604007,http://snomed.info/sct,Complete blood count (procedure),151,149
+procedure,D7241,http://www.ada.org/cdt,removal of impacted tooth  completely bony with unusual surgical complications,142,136
+procedure,763228001,http://snomed.info/sct,Assessment using Canadian Study of Health and Aging Clinical Frailty Scale (procedure),128,128
+procedure,D8080,http://www.ada.org/cdt,comprehensive orthodontic treatment of the adolescent dentition,112,110
+procedure,180207008,http://snomed.info/sct,Intravenous blood transfusion of packed cells (procedure),102,102
+procedure,D5899,http://www.ada.org/cdt,unspecified removable prosthodontic procedure by report,103,95
+procedure,367336001,http://snomed.info/sct,Chemotherapy (procedure),766,88
+procedure,D2940,http://www.ada.org/cdt,protective restoration,78,75
+procedure,D0383,http://www.ada.org/cdt,cone beam CT image capture with field of view of both jaws with or without cranium,73,73
+procedure,D4260,http://www.ada.org/cdt,osseous surgery (including elevation of a full thickness flap and closure) - four or more contiguous teeth or tooth bounded spaces per quadrant,71,68
+procedure,304532001,http://snomed.info/sct,Treatment failure risk education (procedure),64,64
+procedure,D9997,http://www.ada.org/cdt,dental case management - patients with special health care needs,64,62
+procedure,D2932,http://www.ada.org/cdt,prefabricated resin crown,57,57
+procedure,24832002,http://snomed.info/sct,Closed reduction of mandibular fracture (procedure),53,53
+allergy,609328004,http://snomed.info/sct,Allergic disposition (finding),3062,3062
+allergy,84489001,http://snomed.info/sct,Mold (organism),1642,1642
+allergy,264287008,http://snomed.info/sct,Animal dander (substance),1564,1564
+allergy,260147004,http://snomed.info/sct,House dust mite (organism),1250,1250
+allergy,256277009,http://snomed.info/sct,Grass pollen (substance),1239,1239
+allergy,782576004,http://snomed.info/sct,Tree pollen (substance),1212,1212
+allergy,735029006,http://snomed.info/sct,Shellfish (substance),747,747
+allergy,1191,http://www.nlm.nih.gov/research/umls/rxnorm,Aspirin,618,618
+allergy,111088007,http://snomed.info/sct,Latex (substance),497,497
+allergy,288328004,http://snomed.info/sct,Bee venom (substance),477,477
+allergy,762952008,http://snomed.info/sct,Peanut (substance),463,463
+allergy,412071004,http://snomed.info/sct,Wheat (substance),457,457
+allergy,735971005,http://snomed.info/sct,Fish (substance),424,424
+allergy,102263004,http://snomed.info/sct,Eggs (edible) (substance),421,421
+allergy,442571000124108,http://snomed.info/sct,Tree nut (substance),401,401
+allergy,3718001,http://snomed.info/sct,Cow's milk (substance),393,393
+allergy,29046,http://www.nlm.nih.gov/research/umls/rxnorm,Lisinopril,355,355
+allergy,7984,http://www.nlm.nih.gov/research/umls/rxnorm,Penicillin V,284,284
+allergy,256355007,http://snomed.info/sct,Glycine max (substance),179,179
+allergy,10831,http://www.nlm.nih.gov/research/umls/rxnorm,Sulfamethoxazole / Trimethoprim,158,158
+allergy,25037,http://www.nlm.nih.gov/research/umls/rxnorm,cefdinir,62,62
+immunization,140,http://hl7.org/fhir/sid/cvx,"Influenza, split virus, trivalent, PF",157431,18756
+immunization,113,http://hl7.org/fhir/sid/cvx,"Td (adult), 5 Lf tetanus toxoid, preservative free, adsorbed",12951,12647
+immunization,208,http://hl7.org/fhir/sid/cvx,"COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose",10854,5434
+immunization,133,http://hl7.org/fhir/sid/cvx,Pneumococcal conjugate PCV 13,12738,4926
+immunization,207,http://hl7.org/fhir/sid/cvx,"COVID-19, mRNA, LNP-S, PF, 100 mcg/0.5mL dose or 50 mcg/0.25mL dose",8991,4503
+immunization,10,http://hl7.org/fhir/sid/cvx,IPV,10987,3996
+immunization,20,http://hl7.org/fhir/sid/cvx,DTaP,13460,3912
+immunization,03,http://hl7.org/fhir/sid/cvx,MMR,5396,3693
+immunization,21,http://hl7.org/fhir/sid/cvx,varicella,5372,3678
+immunization,114,http://hl7.org/fhir/sid/cvx,meningococcal MCV4P,4935,3568
+immunization,83,http://hl7.org/fhir/sid/cvx,"Hep A, ped/adol, 2 dose",5396,3043
+immunization,49,http://hl7.org/fhir/sid/cvx,Hib (PRP-OMP),8112,2944
+immunization,08,http://hl7.org/fhir/sid/cvx,"Hep B, adolescent or pediatric",8143,2899
+immunization,119,http://hl7.org/fhir/sid/cvx,"rotavirus, monovalent",5382,2745
+immunization,33,http://hl7.org/fhir/sid/cvx,"pneumococcal polysaccharide vaccine, 23 valent",2446,2420
+immunization,62,http://hl7.org/fhir/sid/cvx,"HPV, quadrivalent",6027,2392
+immunization,115,http://hl7.org/fhir/sid/cvx,Tdap,2182,2178
+immunization,121,http://hl7.org/fhir/sid/cvx,"zoster vaccine, live",3384,1837
+immunization,52,http://hl7.org/fhir/sid/cvx,"Hep A, adult",2934,1725
+immunization,43,http://hl7.org/fhir/sid/cvx,"Hep B, adult",2266,1387
+immunization,212,http://hl7.org/fhir/sid/cvx,"COVID-19 vaccine, vector-nr, rS-Ad26, PF, 0.5 mL",521,521
+encounter,162673000,http://snomed.info/sct,General examination of patient (procedure),184503,14085
+encounter,185347001,http://snomed.info/sct,Encounter for problem (procedure),428242,12903
+encounter,50849002,http://snomed.info/sct,Emergency room admission (procedure),44661,12177
+encounter,33879002,http://snomed.info/sct,Administration of vaccine to produce active immunity (procedure),18937,10227
+encounter,410620009,http://snomed.info/sct,Well child visit (procedure),70540,9659
+encounter,32485007,http://snomed.info/sct,Hospital admission (procedure),11226,7987
+encounter,702927004,http://snomed.info/sct,Urgent care clinic (environment),85735,7859
+encounter,390906007,http://snomed.info/sct,Follow-up encounter (procedure),34231,5427
+encounter,305336008,http://snomed.info/sct,Admission to hospice (procedure),5007,3997
+encounter,308646001,http://snomed.info/sct,Death Certification,3868,3868
+encounter,308335008,http://snomed.info/sct,Patient encounter procedure (procedure),23108,3492
+encounter,698314001,http://snomed.info/sct,Consultation for treatment (procedure),12749,3155
+encounter,424441002,http://snomed.info/sct,Prenatal initial visit (regime/therapy),5223,2306
+encounter,305408004,http://snomed.info/sct,Admission to surgical department (procedure),2106,2100
+encounter,169762003,http://snomed.info/sct,Postnatal visit (regime/therapy),3096,1749
+encounter,36228007,http://snomed.info/sct,Ophthalmic examination and evaluation (procedure),18710,1481
+encounter,305432006,http://snomed.info/sct,Admission to surgical transplant department (procedure),1140,1085
+encounter,439740005,http://snomed.info/sct,Postoperative follow-up visit (procedure),8125,1068
+encounter,56876005,http://snomed.info/sct,Drug rehabilitation and detoxification (regime/therapy),2766,1023
+encounter,183452005,http://snomed.info/sct,Emergency hospital admission (procedure),2085,1014
+encounter,305342007,http://snomed.info/sct,Admission to ward (procedure),1074,975
+encounter,305351004,http://snomed.info/sct,Admission to intensive care unit (procedure),1622,908
+encounter,281036007,http://snomed.info/sct,Follow-up consultation (procedure),2323,876
+encounter,394701000,http://snomed.info/sct,Asthma follow-up (regime/therapy),3699,806
+encounter,439708006,http://snomed.info/sct,Home visit (procedure),11180,664
+encounter,270427003,http://snomed.info/sct,Patient-initiated encounter (procedure),897,661
+encounter,170837001,http://snomed.info/sct,Allergic disorder initial assessment (regime/therapy),589,589
+encounter,371883000,http://snomed.info/sct,Outpatient procedure (procedure),18698,489
+encounter,185317003,http://snomed.info/sct,Telephone encounter (procedure),1186,440
+encounter,183478001,http://snomed.info/sct,Emergency hospital admission for asthma (procedure),654,436
+encounter,185389009,http://snomed.info/sct,Follow-up visit (procedure),1197,424
+encounter,183495009,http://snomed.info/sct,Non-urgent orthopedic admission (procedure),431,413
+encounter,448337001,http://snomed.info/sct,Telemedicine consultation with patient (procedure),24470,353
+encounter,4525004,http://snomed.info/sct,Emergency department patient visit (procedure),289,289
+encounter,310061009,http://snomed.info/sct,Gynecology service (qualifier value),2229,269
+encounter,170838006,http://snomed.info/sct,Allergic disorder follow-up assessment (regime/therapy),260,260
+encounter,86013001,http://snomed.info/sct,Periodic reevaluation and management of healthy individual (procedure),257,257
+encounter,1505002,http://snomed.info/sct,Hospital admission for isolation (procedure),252,252
+encounter,223484005,http://snomed.info/sct,Discussion about treatment (procedure),159,159
+encounter,79094001,http://snomed.info/sct,Initial psychiatric interview with mental status and evaluation (procedure),159,156
+encounter,453131000124105,http://snomed.info/sct,Videotelephony encounter (procedure),138,131
+encounter,308251003,http://snomed.info/sct,Admission to clinical oncology department (procedure),118,118
+encounter,305411003,http://snomed.info/sct,Admission to thoracic surgery department (procedure),115,115
+encounter,47505003,http://snomed.info/sct,Posttraumatic stress disorder (disorder),190,80
+encounter,386395000,http://snomed.info/sct,Preoperative coordination (regime/therapy),67,67
+diagnostic_report,34117-2,http://loinc.org,History and physical note,1396066,18999
+diagnostic_report,58410-2,http://loinc.org,CBC panel - Blood by Automated count,73062,18999
+diagnostic_report,69737-5,http://loinc.org,Generalized anxiety disorder 7 item (GAD-7),122697,15091
+diagnostic_report,55757-9,http://loinc.org,Patient Health Questionnaire 2 item (PHQ-2) [Reported],187975,13925
+diagnostic_report,76499-3,http://loinc.org,"Humiliation, Afraid, Rape, and Kick questionnaire [HARK]",71473,12995
+diagnostic_report,57698-3,http://loinc.org,Lipid panel with direct LDL - Serum or Plasma,144508,12374
+diagnostic_report,72109-2,http://loinc.org,Alcohol Use Disorder Identification Test - Consumption [AUDIT-C],71252,12021
+diagnostic_report,82666-9,http://loinc.org,Drug Abuse Screening Test-10 [DAST-10],71256,11981
+diagnostic_report,51990-0,http://loinc.org,Basic Metabolic Panel - Blood,177009,8528
+diagnostic_report,59453-1,http://loinc.org,Morse Fall Scale panel,98960,6550
+diagnostic_report,44249-1,http://loinc.org,PHQ-9 quick depression assessment panel [Reported.PHQ],11319,5944
+diagnostic_report,24323-8,http://loinc.org,Comprehensive metabolic 2000 panel - Serum or Plasma,93930,5609
+diagnostic_report,24357-6,http://loinc.org,Urinalysis macro (dipstick) panel - Urine,208193,4079
+diagnostic_report,69409-1,http://loinc.org,U.S. standard certificate of death - 2003 revision,3868,3868
+diagnostic_report,89206-7,http://loinc.org,Patient Health Questionnaire-9: Modified for Teens [Reported.PHQ.Teen],9047,2679
+diagnostic_report,89577-1,http://loinc.org,Troponin I.cardiac panel - Serum or Plasma by High sensitivity method,13640,1797
+diagnostic_report,55405-5,http://loinc.org,Heart failure tracking panel,4590,1556
+diagnostic_report,94531-1,http://loinc.org,SARS-CoV-2 (COVID-19) RNA panel - Respiratory system specimen by NAA with probe detection,1769,1405
+diagnostic_report,24356-8,http://loinc.org,Urinalysis complete panel - Urine,3970,1355
+diagnostic_report,75689-0,http://loinc.org,Iron panel - Serum or Plasma,12870,1108
+diagnostic_report,34528-0,http://loinc.org,PT panel - Platelet poor plasma by Coagulation assay,7629,1092
+diagnostic_report,24336-0,http://loinc.org,Gas panel - Arterial blood,8424,983
+diagnostic_report,93124-6,http://loinc.org,New York Heart Association Functional Classification panel,980,964
+diagnostic_report,92143-7,http://loinc.org,Respiratory pathogens DNA and RNA panel - Respiratory system specimen by NAA with probe detection,863,863
+diagnostic_report,50190-8,http://loinc.org,Iron and Iron binding capacity panel - Serum or Plasma,10875,861
+diagnostic_report,24339-4,http://loinc.org,Gas panel - Venous blood,822,820
+diagnostic_report,87674-8,http://loinc.org,Optical coherence tomography study,9447,560
+diagnostic_report,80381-7,http://loinc.org,Influenza virus A and B Ag panel - Upper respiratory specimen by Rapid immunoassay,542,542
+diagnostic_report,57023-4,http://loinc.org,Auto Differential panel - Blood,4124,415
+diagnostic_report,600-7,http://loinc.org,Bacteria identified in Blood by Culture,184,184
