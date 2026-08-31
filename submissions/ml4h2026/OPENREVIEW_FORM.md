@@ -19,6 +19,22 @@ journal route.
 > Plan-Then-Compile: Resolving Clinical Terminology in the Database Enables
 > FHIR-to-SQL Generalization to Unseen Concepts
 
+## TL;DR
+
+```
+Resolving clinical terminology through a database lookup rather than memorized codes lifts unseen-concept FHIR-to-SQL from 20.7% to 89.1%; merely making the lookup table visible drives an untrained model's code-hardcoding to zero.
+```
+
+230 characters. Leads with the mechanism and the headline number, and closes on
+the ablation rather than the RL null, which should not be what a skim-reader
+takes away.
+
+Shorter alternative if the field is tighter (175 characters):
+
+```
+Resolving clinical terminology through a database lookup instead of memorized codes lifts FHIR-to-SQL accuracy on clinical concepts never seen in training from 20.7% to 89.1%.
+```
+
 ## Subject area
 
 **Models and Methods** — the contribution is a corpus/schema design and training
