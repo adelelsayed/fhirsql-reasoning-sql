@@ -28,6 +28,25 @@ target format, evaluated for generalization.
 defensible second choice; the work is a methods contribution demonstrated on a
 concrete clinical application.)*
 
+## Keywords
+
+Paste exactly (these drive reviewer matching, so they must pull a clinical
+text-to-SQL reviewer rather than a generic ML one):
+
+```
+text-to-SQL, clinical natural language processing, electronic health records, FHIR, large language models, parameter-efficient fine-tuning, clinical terminology, synthetic health data
+```
+
+Identical to the `egin{keywords}` block in `main.tex` — keep them in sync.
+
+If the form caps the count, drop in this order: `synthetic health data`,
+`clinical terminology`, `FHIR`. Never drop `text-to-SQL` or
+`electronic health records`.
+
+Deliberately omitted: `reinforcement learning` / `GRPO`. Including them would
+match RL reviewers who would then judge the paper on its weakest section; the
+null result is one scoped subsection and should not drive reviewer assignment.
+
 ## Data modality
 
 **Structured electronic health records / tabular clinical data** — FHIR R4
