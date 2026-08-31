@@ -1,0 +1,282 @@
+%% ML4H 2026 -- Findings Track submission (ANONYMIZED)
+%%
+%% Paste this into the official ML4H 2026 Overleaf template:
+%%   https://www.overleaf.com/latex/templates/machine-learning-for-health-ml4h-2026-template/sqgwhtyswgcy
+%% The template supplies jmlr.cls / jmlr2e.sty and the track macros. Keep the
+%% template's own preamble; replace its body with everything from \title onward.
+%%
+%% Track: findings (4 pages excluding references and appendices)
+%% Review is DOUBLE-BLIND -- do not de-anonymize before decisions are released.
+
+\documentclass[pmlr,twocolumn,10pt]{jmlr}
+
+% --- Track selection (per the ML4H 2026 template) -------------------------
+\jmlrproceedings{ML4H}{Machine Learning for Health (ML4H) 2026}
+% Use the template's findings/anonymous switches as documented in its README.
+
+\title[Plan-Then-Compile]{Plan-Then-Compile: Making Clinical-Concept
+Generalization Measurable in FHIR-to-SQL, and Why RL Adds Nothing Once It Is}
+
+\author{\Name{Anonymous Author(s)} \Email{anonymous@example.org}\\
+\addr Affiliation withheld for double-blind review}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Text-to-SQL over clinical data conflates two skills: composing a query, and
+mapping a clinical concept to the code the database stores it under. When gold
+SQL embeds literal codes, the second is memorization, and no metric computed on
+that data can separate them. We rebuild a FHIR-derived benchmark so terminology
+is resolved \emph{through the database} --- every gold query looks the concept up
+in a \texttt{valuesets} table at runtime and never embeds a literal SNOMED CT,
+ICD-10 or RxNorm code --- and pair each target with a structured JSON query plan
+compiled into SQL in one completion. On an earlier version of this pipeline that
+did embed literal codes, a fine-tuned model reached 98.4\% execution match on
+familiar concepts but 20.7\% on concepts absent from training. Under the lookup
+design, DoRA fine-tuning of a 14B open-weight coder model reaches 100\% on
+familiar concepts and 89.1\% on unseen ones (81.4\% by the stricter text metric),
+from frozen baselines of 34.8\% and 60.8\%. Two findings follow. An ablation
+shows that merely making the lookup table \emph{visible} in the schema drives the
+\emph{untrained} model's code-hardcoding from 3.4\% to 0.0\%, with no training
+signal at all. And a DAPO/GRPO stage adds nothing: all three seeds stop at step
+40 of 200 having peaked at the first checkpoint, with mean reward pinned at the
+correct-answer floor --- supervised fine-tuning already saturates the objective.
+\end{abstract}
+
+\section{Introduction}
+
+``How many patients with essential hypertension were prescribed a statin last
+year?'' looks like one translation step. It decomposes into at least four:
+isolating the clinical entities, identifying the query archetype they imply,
+composing SQL over a normalized schema, and resolving each concept to the code
+the data actually uses. The first three are reasoning that should transfer. The
+fourth, done from parametric memory, is recall --- it degrades for rare concepts,
+varies across coding systems (SNOMED CT, ICD-10, RxNorm, LOINC, CDT and CVX all
+appear in our corpus), and cannot be audited.
+
+Conventional supervision collapses all four into an opaque mapping to a query
+string, which is a measurement problem as much as a capability one: when a model
+is wrong there is no way to tell which skill failed, and when it is right there
+is no way to tell whether it reasoned or recognized.
+
+This is not hypothetical. An earlier iteration of our own pipeline embedded
+literal codes in gold SQL. A fine-tuned model then reached 98.4\% execution match
+on familiar clinical concepts and \textbf{20.7\%} on concepts absent from
+training --- not a reasoning failure, but a model unable to know codes it had
+never been shown. Rebuilding the corpus around database-resolved terminology is
+the response, and the results below are the comparison.
+
+\paragraph{Contributions.}
+(i) A FHIR-native corpus in which terminology resolution is a queryable
+operation rather than recall, with an evaluation design that isolates
+generalization to unseen clinical concepts from generalization to unseen
+patients. (ii) A soundness-by-construction detector for lookup bypass, and the
+finding that schema \emph{visibility} alone eliminates hardcoding in an
+untrained model. (iii) A negative result with mechanism: DAPO/GRPO adds nothing
+once SFT saturates the reward's correctness gate. (iv) An explicit accounting of
+how much of each evaluation arm is genuinely novel, and a quantified bound on how
+discriminative execution match actually is.
+
+\section{Method}
+
+\subsection{Terminology resolved in the database}
+
+Every coded table carries a \texttt{code}/\texttt{system}/\texttt{display}
+triple, and a \texttt{valuesets} table indexes every
+\texttt{(table\_name, code, code\_system, display)} combination in the corpus.
+Gold SQL never contains a literal clinical code; it resolves the concept at query
+time:
+
+\begin{small}
+\begin{verbatim}
+WITH resolved AS (
+  SELECT code, code_system FROM valuesets
+  WHERE table_name = 'procedure'
+    AND display ILIKE '%Depression screening%'
+)
+SELECT DISTINCT patient_id
+FROM procedure, resolved
+WHERE procedure.code = resolved.code
+  AND procedure.system = resolved.code_system
+  AND status = 'completed'
+\end{verbatim}
+\end{small}
+
+This needs no retrieval infrastructure, no tool calls and no prompt-format
+change --- it is ordinary SQL over columns that already exist. The model need
+only produce a plausible search phrase; the database resolves it
+deterministically. Concepts whose display text matches more than one row are
+excluded from gold generation rather than resolved by an arbitrary tiebreak.
+
+\subsection{Plan, then compile}
+
+Each target is a structured JSON query plan followed by the compiled SQL in one
+continuous completion. The plan's \texttt{entities} array names the concepts,
+their roles (primary vs.\ companion), clinical domain, and whether each needs a
+lookup; \texttt{constraints} and \texttt{aggregation} encode the archetype, drawn
+from a closed vocabulary where every value maps to a clause shape some template
+already needs. Because the plan precedes the SQL autoregressively, the model
+commits to its reading of the question before composing the query, and that
+commitment is recoverable from the output.
+
+\subsection{Detecting lookup bypass}
+
+A model could still embed a literal code and produce a correct query, which an
+execution-only metric cannot see. We flag any comparison of
+\texttt{code}/\texttt{system} (and their FHIR-prefixed variants) against a quoted
+literal. This is sound by construction: legitimate lookup CTEs filter only on
+\texttt{table\_name} and \texttt{display}, and join against \emph{identifiers},
+never literals, so a match can only mean the lookup was bypassed. Validated
+against all 9{,}680 gold-SQL-bearing training rows with zero false positives.
+
+\section{Setup}
+
+Two disjoint synthetic populations were generated with Synthea (train 18{,}999
+patients; held-out 6{,}383; zero \texttt{patient\_id} overlap, verified by set
+intersection). No real patient data is used. Questions come from an archetype
+$\times$ concept factory: 82 archetypes (64 answerable, 18 unanswerable) across
+four difficulty tiers plus operational, regulatory and quality-KPI categories,
+instantiated against concepts selected to span the coverage range. Every
+answerable gold query was executed and kept only if it ran without error and
+returned at least one row, then checked for repeated-execution stability.
+Assembled: 10{,}696 training rows (9{,}680 execution-verified + 1{,}016
+unanswerable), 2{,}420 distinct gold queries.
+
+We fine-tune \texttt{Qwen2.5-Coder-14B-Instruct} with DoRA (rank 16, $\alpha$ 32,
+all linear layers) under NF4 quantization, two epochs, three seeds, on a single
+consumer-cloud GPU ($\approx$12\,h/seed). A DAPO stage then continues each seed's
+best checkpoint (Clip-Higher, Dynamic Sampling, token-level loss; reward gates
+efficiency behind strict correctness).
+
+\paragraph{Two evaluation arms.} \emph{Familiar} --- concepts also used in
+training, against the disjoint population, isolating \emph{population}
+generalization. \emph{Unseen} --- 84 concepts appearing nowhere in training
+(verified disjoint; zero shared question/query pairs), isolating \emph{concept}
+generalization.
+
+\section{Results}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Held-out benchmark, mean over three seeds. Frozen figures use a
+\emph{complete} schema description (\S\ref{sec:abl}); under the training-time
+prompt they are 10.2\% and 31.3\%.}
+\label{tab:main}
+\begin{tabular}{lrrr}
+\toprule
+ & Frozen & SFT & SFT+RL \\
+\midrule
+Exec.\ match, familiar & 34.8 & \textbf{100.0} & 100.0 \\
+Exec.\ match, unseen   & 60.8 & \textbf{89.1}  & 89.2 \\
+Text match, unseen     & 0.0  & 81.4  & 81.5 \\
+Hardcoding rate        & 0.0  & 0.0   & 0.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:main} gives the headline. A frozen model given the full schema
+still never reproduces a gold query (0.0\% text match on both arms), refuses
+unanswerable questions unreliably in both directions, and writes correct queries
+4.5--12$\times$ slower than gold. After fine-tuning, familiar-arm execution
+correctness is perfect on all three seeds; the unseen arm reaches 89.1\%
+(85.0--92.1\% across seeds).
+
+\subsection{Ablation: schema visibility alone removes hardcoding}
+\label{sec:abl}
+
+During our published runs the schema shipped to the model omitted the
+\texttt{valuesets} DDL: fine-tuned models had learned the table's shape from
+training targets, but the frozen baseline had only the table name. We re-ran the
+frozen model twice on identical rows, with and without that DDL.
+
+Showing it the table quadruples familiar-arm execution match
+(8.7\%\,$\rightarrow$\,34.8\%) and roughly doubles unseen
+(31.2\%\,$\rightarrow$\,60.8\%). A fine-tuned control moves \textbf{+0.8\,pp},
+confirming those models had already internalized the schema. Most striking:
+terminology-hardcoding falls to \textbf{0.0\%} on both arms
+(from 1.8\% and 4.2\%). \emph{An untrained model stops embedding literal codes
+purely because the lookup route became discoverable.} Models bypass a resolution
+mechanism they cannot see; the fix is as much schema design as training. The
+event counts are small (6 hardcoded completions across the without-DDL legs), so
+we report direction rather than effect size.
+
+\subsection{RL adds nothing, and the dynamics show why}
+
+All three seeds hit their best dev execution match at the \emph{first}
+evaluation checkpoint (step 10) and never improved, early-stopping at step 40 of
+a 200-step budget. Mean reward sat at or above 1.0 --- the correct-answer floor
+--- on 37--38 of 40 steps, meaning sampled completions were already
+overwhelmingly correct before any update. With correctness saturated, the reward
+variance Dynamic Sampling retained (it still kept $\approx$87\% of groups) must
+have come largely from the small efficiency bonus, which is derived from
+wall-clock timing. We did not log per-group reward components, so this is an
+inference from reward statistics rather than a measurement.
+
+The conclusion is scoped: \emph{when SFT already saturates a reward's correctness
+gate, a GRPO/DAPO stage on the same objective has nothing left to optimize.}
+
+\section{What each arm can and cannot show}
+
+We report this explicitly because the headline invites over-reading.
+\textbf{96.5\%} of the familiar arm's answerable rows are byte-identical
+(question, gold SQL) pairs from training; only the patient population differs,
+and gold SQL holds no patient-specific literals. A purely memorizing model would
+also score 100\% there. That arm shows learned queries \emph{stay correct} on new
+data --- necessary, not sufficient. The unseen arm shares zero question/query
+pairs and zero concepts with training, and is where transfer is established.
+
+Its 89.1\% is an \textbf{upper bound}. Unseen concepts are rare (1--3 patients
+each) and gold answers are small integers, so \textbf{53.9\%} of within-archetype
+concept pairs return identical results --- confusing one concept for another can
+go undetected. Text-match metrics cannot be satisfied that way and give 81.4\% as
+a lower bound. True performance lies in 81--89\%.
+
+Finally, the 1{,}016 unanswerable questions are identical across training and
+both arms, so perfect abstention measures \emph{retention} of trained refusal,
+not held-out refusal generalization.
+
+\section{Discussion}
+
+\paragraph{Why not simply call a frontier API?} We deliberately do not
+benchmark against proprietary hosted models. For the deployment this targets ---
+querying PHI-bearing clinical databases --- transmitting records to a third-party
+API is frequently precluded by data-governance and residency rules regardless of
+accuracy, so a hosted baseline would not be an available alternative even if it
+matched. The relevant comparison is against what can run inside the institution's
+own boundary, which is what we report. A locally hosted adapter also has
+bounded, one-off cost rather than per-query billing.
+
+\paragraph{Limitations.} Synthetic data only; all questions derive from one
+templated generation distribution, so robustness to free-form clinician phrasing
+is untested; terminology resolution is substring matching over a dictionary with
+one display string per code, so synonymy, hierarchy and genuine ambiguity are out
+of scope (ambiguous concepts are excluded from gold) --- real deployment needs
+value-set expansion; a single base model, scale and schema; and the unseen arm's
+archetypes are all trained archetypes, so what transfers is concept
+identification and lookup composition, not novel query composition.
+
+\paragraph{Outlook.} Nothing here is specific to FHIR. Any domain with a
+normalized schema, a controlled vocabulary and a supply of verifiable queries
+presents the same structure. The most useful extension is not a larger model but
+a harder benchmark with genuine headroom above the supervised ceiling --- which
+is where an RL stage might finally earn its cost.
+
+\section*{Ethics statement}
+This work uses only synthetic patient records generated by Synthea; no real
+patient data, human subjects or identifiable information are involved, so
+institutional ethics approval is not applicable. Relevant confirmation will be
+provided if the paper is accepted.
+
+\section*{Data and code availability}
+All code, generated datasets, trained adapter weights and the complete
+per-seed logs, evaluation summaries, failure logs and ablation results behind
+every number reported here are publicly released under open licenses. Links are
+withheld for double-blind review and will be provided on acceptance. A
+de-anonymized version of this work has been publicly archived with a DOI; per the
+Findings-track policy this overlapping release is declared at submission.
+
+\bibliography{refs}
+
+\end{document}
