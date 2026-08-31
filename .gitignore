@@ -47,3 +47,6 @@ notes/
 # HF upload staging -- byte-identical duplicate of data/training + schema,
 # assembled only for pushing to the Hugging Face dataset repo.
 hf_dataset_staging/
+
+# Figure raster preview (the PDF is the one LaTeX uses)
+submissions/ml4h2026/fig1_unseen.png

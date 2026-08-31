@@ -170,6 +170,17 @@ generalization. \emph{Unseen} --- 84 concepts appearing nowhere in training
 (verified disjoint; zero shared question/query pairs), isolating \emph{concept}
 generalization.
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig1_unseen}
+\caption{Execution match on clinical concepts absent from training.
+Left: an earlier iteration of this same pipeline, in which gold SQL embedded
+literal clinical codes. Right: the database-resolved design, frozen and
+fine-tuned, both given the complete schema. The dashed line marks the 81.4\%
+lower bound implied by the stricter text-match metric (Section~\ref{sec:arms}).}
+\label{fig:unseen}
+\end{figure}
+
 \section{Results}
 
 \begin{table}[t]
@@ -191,7 +202,7 @@ Hardcoding rate        & 0.0  & 0.0   & 0.0 \\
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:main} gives the headline. A frozen model given the full schema
+Table~\ref{tab:main} gives the headline, and Figure~\ref{fig:unseen} isolates the effect of the terminology design on the arm that matters. A frozen model given the full schema
 still never reproduces a gold query (0.0\% text match on both arms), refuses
 unanswerable questions unreliably in both directions, and writes correct queries
 4.5--12$\times$ slower than gold. After fine-tuning, familiar-arm execution
@@ -233,6 +244,7 @@ The conclusion is scoped: \emph{when SFT already saturates a reward's correctnes
 gate, a GRPO/DAPO stage on the same objective has nothing left to optimize.}
 
 \section{What each arm can and cannot show}
+\label{sec:arms}
 
 We report this explicitly because the headline invites over-reading.
 \textbf{96.5\%} of the familiar arm's answerable rows are byte-identical
