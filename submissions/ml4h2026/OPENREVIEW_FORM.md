@@ -53,7 +53,7 @@ text-to-SQL reviewer rather than a generic ML one):
 text-to-SQL, clinical natural language processing, electronic health records, FHIR, large language models, parameter-efficient fine-tuning, clinical terminology, synthetic health data
 ```
 
-Identical to the `egin{keywords}` block in `main.tex` — keep them in sync.
+Identical to the `\begin{keywords}` block in `main.tex` — keep them in sync.
 
 If the form caps the count, drop in this order: `synthetic health data`,
 `clinical terminology`, `FHIR`. Never drop `text-to-SQL` or
