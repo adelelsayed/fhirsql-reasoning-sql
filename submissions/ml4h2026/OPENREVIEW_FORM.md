@@ -19,6 +19,17 @@ journal route.
 > Plan-Then-Compile: Resolving Clinical Terminology in the Database Enables
 > FHIR-to-SQL Generalization to Unseen Concepts
 
+## Abstract
+
+Plain-text form of the manuscript abstract, LaTeX markup unwrapped
+(221 words, 1,358 characters). Contains no mathematics, so no `$...$` is
+needed. Kept verbatim-identical in substance to `main.tex` — if you edit one,
+edit both. Regenerate with the snippet in `make_abstract.txt`.
+
+```
+Text-to-SQL over clinical data conflates two skills: composing a query, and mapping a clinical concept to the code the database stores it under. When gold SQL embeds literal codes, the second is memorization, and no metric computed on that data can separate them. We rebuild a FHIR-derived benchmark so terminology is resolved through the database — every gold query looks the concept up in a valuesets table at runtime and never embeds a literal SNOMED CT, ICD-10 or RxNorm code — and pair each target with a structured JSON query plan compiled into SQL in one completion. On an earlier version of this pipeline that did embed literal codes, a fine-tuned model reached 98.4% execution match on familiar concepts but 20.7% on concepts absent from training. Under the lookup design, DoRA fine-tuning of a 14B open-weight coder model reaches 100% on familiar concepts and 89.1% on unseen ones (81.4% by the stricter text metric), from frozen baselines of 34.8% and 60.8%. An ablation isolates why this works: merely making the lookup table visible in the schema drives the untrained model's code-hardcoding from 3.4% to 0.0%, with no training signal at all — models bypass a resolution mechanism they cannot see. We additionally report that a DAPO/GRPO stage adds nothing on top of supervised fine-tuning, which already saturates the reward's correctness gate.
+```
+
 ## TL;DR
 
 ```
