@@ -48,12 +48,35 @@ Resolving clinical terminology through a database lookup instead of memorized co
 
 ## Subject area
 
-**Models and Methods** — the contribution is a corpus/schema design and training
-target format, evaluated for generalization.
+**Applications and Practice**
 
-*(If the form's descriptions suggest otherwise, "Applications and Practice" is a
-defensible second choice; the work is a methods contribution demonstrated on a
-concrete clinical application.)*
+Revised from an initial reading of "Models and Methods". The CFP's own bullets
+under Applications and Practice are three direct hits:
+
+- *"Datasets and simulation frameworks for addressing gaps in ML healthcare applications"* — the synthetic corpus
+- *"Surveys, benchmarks, evaluations and best practices of using ML in healthcare"* — the two-arm benchmark
+- *"electronic health records (EHR)"* — named as a traditional area
+
+Models and Methods is for new learning algorithms; this work uses DoRA and DAPO
+off the shelf and claims no algorithmic novelty, so reviewers in that area would
+ask for something the paper does not offer. Applications reviewers are also
+markedly more receptive to synthetic-data and benchmark contributions.
+
+## Specific subject areas
+
+Paste (all but the last are lifted from the CFP's own vocabulary, so they match
+how reviewers self-declare expertise):
+
+```
+electronic health records (EHR), benchmarks and evaluation, datasets and simulation frameworks, domain adaptation and generalization, natural language processing, text-to-SQL
+```
+
+If the field takes only two or three: `electronic health records (EHR)`,
+`benchmarks and evaluation`, `natural language processing`.
+
+`domain adaptation and generalization` sits under a different top-level area but
+is kept deliberately — it is the term that best describes what the unseen-concept
+arm measures, and may attract a reviewer who scrutinises generalization claims.
 
 ## Keywords
 
