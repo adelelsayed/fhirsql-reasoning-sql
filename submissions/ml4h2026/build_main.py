@@ -1,150 +1,37 @@
-% use the "wcp" class option for workshop and conference
-% proceedings
-%\documentclass[gray]{jmlr} % test grayscale version
-%\documentclass[tablecaption=bottom]{jmlr}% journal article
-\documentclass[pmlr,twocolumn,10pt]{jmlr} % W&CP article
+"""Rebuild submissions/ml4h2026/main.tex as a complete, drop-in ML4H 2026 file.
 
-% REQUIRED: select your submission track. Use one of:
-  %   proceedings, findings, demo, perspective
-  % Leaving the argument empty (\mlhtrack{}) compiles but shows a red
-  % "please specify the submission track" warning in the page header.
-  % Removing this line entirely raises a "No ML4H track specified" class error.
-  % NOTE: keep \mlhtrack{...} BEFORE the \iffinal / \ifmlhneedspmlr blocks below —
-  % those conditionals depend on the flags this command sets.
-\mlhtrack{findings}
+Takes the official template's own preamble verbatim (so every class macro and
+conditional the template defines is preserved) and substitutes our title,
+anonymous author block, track selection, and body.
+"""
+import io, re
 
-\newif\iffinal
-\finalfalse  % toggle this flag for initial submission
-% \finaltrue  % toggle this flag for camera-ready version after acceptance
+BS = chr(92)
+SC = r"C:\Users\adele\AppData\Local\Temp\claude\c--dev-fhirsql\db88938b-cd28-45d9-b6fa-d7086202a1a4\scratchpad"
+OUT = r"C:\dev\fhirsql-phase2\submissions\ml4h2026\main.tex"
 
-\iffinal
-    % For Proceedings and Perspective tracks (published in PMLR), replace XXX below
-    % with the specific PMLR volume number sent to you before the camera-ready submission.
-    \ifmlhneedspmlr
-      \jmlrvolume{XXX}
-      \jmlryear{2026}
-    \fi
-    \ifmlhfindings \jmlrproceedings{}{ML4H 2026 - Findings Track}\fi
-    \ifmlhdemo     \jmlrproceedings{}{ML4H 2026 - Demo Track}\fi
-    \jmlrworkshop{Machine Learning for Health (ML4H) 2026}
-\else
-    % Submitted for review
-    \jmlrproceedings{}{Submitted to ML4H 2026: \mlhtrackname}
-    \jmlrworkshop{Machine Learning for Health (ML4H) 2026}
-\fi
+pre = io.open(SC + r"\tmpl_preamble.tex", encoding="utf-8").read()
 
-% \usepackage{geometry}
-% \geometry{margins=0.1in,textwidth=7in}
+# ---- 1. select the findings track -------------------------------------------
+NL = chr(10)
+cmd = NL + BS + "mlhtrack{}"          # standalone command, not the comment mentions
+assert pre.count(cmd) == 1, "mlhtrack command line not found (%d)" % pre.count(cmd)
+pre = pre.replace(cmd, NL + BS + "mlhtrack{findings}")
 
-% The following packages will be automatically loaded:
-% amsmath, amssymb, natbib, graphicx, url, algorithm2e
-\urlstyle{same}
+# ---- 2. our title ------------------------------------------------------------
+old_title = BS + "title[Short Title]{ML4H 2026 Template}"
+assert pre.count(old_title) == 1, "template title not found"
+new_title = (BS + "title[Plan-Then-Compile]{Plan-Then-Compile: Resolving Clinical Terminology\n"
+             "in the Database Enables FHIR-to-SQL Generalization to Unseen Concepts}")
+pre = pre.replace(old_title, new_title)
 
-%\usepackage{rotating}% for sideways figures and tables
-%\usepackage{longtable}% for long tables
+# ---- 3. author stays anonymous (template already has \author{Anonymous Author(s)}) ----
+assert BS + "author{Anonymous Author(s)}" in pre, "anonymous author block not found"
 
-% The booktabs package is used by this sample document
-% (it provides \toprule, \midrule and \bottomrule).
-% Remove the next line if you don't require it.
+# ---- 4. keep line numbers off for a cleaner review PDF? -- template enables them;
+#         leave as the template ships it.
 
-\usepackage{booktabs}
-% The siunitx package is used by this sample document
-% to align numbers in a column by their decimal point.
-% Remove the next line if you don't require it.
-\usepackage{siunitx}
-
-% The lineno package is required for denoting line
-% numbers for paper review.
-\usepackage[switch]{lineno}
-
-% The following command is just for this sample document:
-\newcommand{\cs}[1]{\texttt{\char`\\#1}}% remove this in your real article
-
-% The following is to recognise equal contribution for authorship
-\newcommand{\equal}[1]{{\hypersetup{linkcolor=black}\thanks{#1}}}
-
-% Define an unnumbered theorem just for this sample document for
-% illustrative purposes:
-\theorembodyfont{\upshape}
-\theoremheaderfont{\scshape}
-\theorempostheader{:}
-\theoremsep{\newline}
-\newtheorem*{note}{Note}
-
-% The optional argument of \title is used in the header
-\title[Plan-Then-Compile]{Plan-Then-Compile: Resolving Clinical Terminology
-in the Database Enables FHIR-to-SQL Generalization to Unseen Concepts}
-
-% Anything in the title that should appear in the main title but 
-% not in the article's header or the volume's table of
-% contents should be placed inside \titletag{}
-
-%\title{Title of the Article\titletag{\thanks{Some footnote}}}
-
-
-% Use \Name{Author Name} to specify the name.
-% If the surname contains spaces, enclose the surname
-% in braces, e.g. \Name{John {Smith Jones}} similarly
-% if the name has a "von" part, e.g \Name{Jane {de Winter}}.
-% If the first letter in the forenames is a diacritic
-% enclose the diacritic in braces, e.g. \Name{{\'E}louise Smith}
-
-% \thanks must come after \Name{...} not inside the argument for
-% example \Name{John Smith}\nametag{\thanks{A note}} NOT \Name{John
-% Smith\thanks{A note}}
-
-% Anything in the name that should appear in the title but not in the 
-% article's header or footer or in the volume's
-% table of contents should be placed inside \nametag{}
-
-% Anonymized author list during review
-\author{Anonymous Author(s)}
-
-% Two authors with the same address
-% \author{%
-%  \Name{Author Name1\nametag{\thanks{A note}}} \Email{abc@sample.com}\and
-%  \Name{Author Name2} \Email{xyz@sample.com}\\
-%  \addr Address
-% }
-
-% Three or more authors with the same address:
-% \author{%
-%  \Name{Author Name1} \Email{an1@sample.com}\\
-%  \Name{Author Name2} \Email{an2@sample.com}\\
-%  \Name{Author Name3} \Email{an3@sample.com}\\
-%  \Name{Author Name4} \Email{an4@sample.com}\\
-%  \Name{Author Name5} \Email{an5@sample.com}\\
-%  \Name{Author Name6} \Email{an6@sample.com}\\
-%  \Name{Author Name7} \Email{an7@sample.com}\\
-%  \Name{Author Name8} \Email{an8@sample.com}\\
-%  \Name{Author Name9} \Email{an9@sample.com}\\
-%  \Name{Author Name10} \Email{an10@sample.com}\\
-%  \Name{Author Name11} \Email{an11@sample.com}\\
-%  \Name{Author Name12} \Email{an12@sample.com}\\
-%  \Name{Author Name13} \Email{an13@sample.com}\\
-%  \Name{Author Name14} \Email{an14@sample.com}\\
-%  \addr Address
-% }
-
-% % Authors with different addresses and equal first authors:
-% \author{%
-% \Name{First Author 1}\equal{These authors contributed equally} \Email{abc@sample.com}\\
-% \addr University X, Country 1
-% \AND
-% % footnotemark[1] is to refer to the \equal footnote
-% \Name{First Author 2}\footnotemark[1] \Email{def@sample.com}\\
-% \addr University Y, Country 2
-% \AND
-% \Name{Last Author} \Email{ghi@sample.com}\\
-% \addr University Z, Country 3
-% }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%% Remove the \linenumbers in the final version %%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\linenumbers % Activate line numbering
-
-\begin{document}
+body = r"""\begin{document}
 
 \maketitle
 
@@ -438,3 +325,9 @@ is where an RL stage might finally earn its cost.
 \bibliography{refs}
 
 \end{document}
+"""
+
+io.open(OUT, "w", encoding="utf-8").write(pre + body)
+print("wrote", OUT)
+print("  preamble from official template:", len(pre), "chars")
+print("  body:", len(body), "chars")
