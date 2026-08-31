@@ -1,4 +1,44 @@
-# OpenReview submission form — prepared answers
+# OpenReview submission — SUBMITTED
+
+**Status: submitted to ML4H 2026, Findings track.**
+
+| | |
+|---|---|
+| Forum | https://openreview.net/forum?id=EntkxH9paA |
+| Submission ID | `EntkxH9paA` |
+| Submission number | 41 |
+| Track | Findings (non-archival) |
+
+## Remaining action — reviewer waiver
+
+File the exemption form, which requires the ID above:
+https://docs.google.com/forms/d/e/1FAIpQLSe827colORXf495aAXCOgN8gjCD52dcL4-hiPAoygmfyMDkiw/viewform
+
+- **Paper title:** Plan-Then-Compile: Resolving Clinical Terminology in the Database Enables FHIR-to-SQL Generalization to Unseen Concepts
+- **Submission ID:** `EntkxH9paA` (Submission 41)
+- **Grounds:** no prior archival peer-reviewed publication; prior work is self-archived only
+
+An unregistered, unexempted submission is desk-rejectable, so this is not
+optional. File it well before the deadline so it can be processed.
+
+## Dates from here
+
+| | |
+|---|---|
+| Reviews released | 5 Oct |
+| Author response window | 5–12 Oct — keep this free |
+| Decisions | 22 Oct |
+| Camera-ready | 7 Nov (tentative) |
+| Symposium | 6–7 Dec, Sydney |
+
+On acceptance, de-anonymize for camera-ready: restore author name and
+affiliation, add the public repository, DOI and Hugging Face links to the Data
+and Code Availability statement, and add the acknowledgments (which the template
+says must appear only in the camera-ready version).
+
+---
+
+# Prepared field answers (as submitted)
 
 Submit at: https://openreview.net/group?id=ML4H/2026/Symposium
 **Deadline: 10 September 2026, 11:59 PM AoE.**
