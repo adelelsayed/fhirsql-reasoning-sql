@@ -1,30 +1,37 @@
 cff-version: 1.2.0
 message: "If you use this code, dataset, or paper, please cite it as below."
-title: "Plan-Then-Compile: Structured Reasoning Traces for FHIR-to-SQL Fine-Tuning"
+title: "Plan-Then-Compile: Turning a General-Purpose Coder Model into a FHIR Data Analyst"
 type: software
 version: 1.0.0
 date-released: "2026-08-30"
-license: CC-BY-4.0
+license:
+  - Apache-2.0
+  - CC-BY-4.0
 repository-code: "https://github.com/adelelsayed/fhirsql-reasoning-sql"
 abstract: >-
-  A fine-tuning study on translating natural-language hospital questions into
-  DuckDB SQL against a FHIR-derived schema, building on a prior study
-  (Elsayed 2026a, "From Frozen to Fluent") by retargeting SFT and DAPO/GRPO
-  RL to produce a structured JSON query plan followed by the compiled SQL,
-  in one continuous completion, giving RL a genuine reasoning trace to
-  refine rather than a single flat SQL guess. Across three seeds, SFT lifts
-  structural query-plan correctness from 0% (frozen base model) to 99.6% on
-  familiar clinical concepts and 82.1% on concepts never seen in training,
-  eliminates terminology-hardcoding entirely via an explicit reward penalty
-  (0.0% vs. the frozen model's 3.0-3.4%), and reaches perfect abstention
-  precision/recall (100%/100%). A subsequent DAPO/GRPO RL stage again shows
-  no measurable gain over SFT -- the same finding as the prior study, now
-  replicated under a design built specifically to give RL a reasoning trace
-  to work with, strengthening rather than merely repeating the result. A
-  database-verified error analysis attributes 78% of residual unseen-concept
-  failures to a single benign surface-form pattern (over-applying a SNOMED
-  CT qualifier-suffix convention to concepts coded in other terminology
-  systems), not diffuse reasoning failure.
+  A frozen Qwen2.5-Coder-14B-Instruct is effectively unusable as an analyst over
+  a FHIR-derived clinical database: asked ordinary hospital questions it returns
+  the right answer roughly one time in ten on familiar clinical concepts, never
+  reproduces a correct query verbatim, and refuses unanswerable questions barely
+  better than chance. This study takes that model to a working analyst.
+  Fine-tuning with DoRA on 10,696 examples (9,680 with execution-verified gold
+  SQL plus 1,016 unanswerable questions) raises execution correctness on a
+  disjoint held-out patient population to 100.0%, and on clinical concepts
+  appearing nowhere in training to 89.1%, reproducibly across three seeds;
+  abstention on trained refusal categories reaches 100%/100%. Against a frozen
+  baseline given the same schema information the fine-tuned models had
+  internalized, those are rises from 34.8% and 60.8%; a dedicated ablation
+  isolates the effect of that schema description and finds that merely making
+  the terminology table visible drives the untrained model's code-hardcoding to
+  zero. The study is explicit about evaluation-arm limits: the familiar arm is
+  96.5% verbatim training rows and the unanswerable set is reused across splits,
+  so those results show retention, while the unseen-concept arm shares no
+  question, query or concept with training and is where transfer is
+  established; its 89.1% is an upper bound, with text-match metrics giving 81.4%
+  as a lower bound. The broader implication is a repeatable recipe for
+  converting mid-sized open-weight models into competent domain analysts for
+  specialized, terminology-heavy systems that general-purpose models handle
+  poorly.
 authors:
   - family-names: "Elsayed"
     given-names: "Adel"
@@ -38,8 +45,8 @@ keywords:
   - reinforcement learning
   - GRPO
   - DAPO
-  - chain-of-thought
   - structured reasoning
+  - clinical terminology
   - FHIR
   - clinical data
   - synthetic health data
@@ -50,15 +57,6 @@ identifiers:
     value: "https://github.com/adelelsayed/fhirsql-reasoning-sql"
     description: Source code repository
 references:
-  - type: software
-    title: "From Frozen to Fluent: DoRA Fine-Tuning for Reliable, Generalizing FHIR-to-SQL Generation"
-    authors:
-      - family-names: "Elsayed"
-        given-names: "Adel"
-        orcid: "https://orcid.org/0009-0009-2892-1200"
-    year: 2026
-    doi: "10.5281/zenodo.21988210"
-    notes: "The prior, flat-question-to-SQL study this work responds to and builds on."
   - type: article
     title: "Synthea: An approach, method, and software mechanism for generating synthetic patients and the synthetic electronic health care record"
     authors:
@@ -67,11 +65,23 @@ references:
     year: 2018
     doi: "10.1093/jamia/ocx079"
   - type: article
+    title: "Qwen2.5-Coder Technical Report"
+    authors:
+      - name: "Hui B, Yang J, Cui Z, et al."
+    year: 2024
+    doi: "10.48550/arXiv.2409.12186"
+  - type: article
     title: "DoRA: Weight-Decomposed Low-Rank Adaptation"
     authors:
       - name: "Liu SY, Wang CY, Yin H, Molchanov P, Wang YCF, Cheng KT, Chen MH"
     year: 2024
     doi: "10.48550/arXiv.2402.09353"
+  - type: article
+    title: "QLoRA: Efficient Finetuning of Quantized LLMs"
+    authors:
+      - name: "Dettmers T, Pagnoni A, Holtzman A, Zettlemoyer L"
+    year: 2023
+    doi: "10.48550/arXiv.2305.14314"
   - type: article
     title: "DAPO: An Open-Source LLM Reinforcement Learning System at Scale"
     authors:
@@ -85,8 +95,8 @@ references:
     year: 2024
     doi: "10.48550/arXiv.2402.03300"
   - type: article
-    title: "Qwen2.5-Coder Technical Report"
+    title: "DuckDB: an Embeddable Analytical Database"
     authors:
-      - name: "Hui B, Yang J, Cui Z, et al."
-    year: 2024
-    doi: "10.48550/arXiv.2409.12186"
+      - name: "Raasveldt M, Muhleisen H"
+    year: 2019
+    doi: "10.1145/3299869.3320212"

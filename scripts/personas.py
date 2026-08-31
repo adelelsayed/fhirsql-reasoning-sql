@@ -25,7 +25,7 @@ PERSONAS = {
 
 # archetype_id -> ordered list of the personas most likely to ask that question shape.
 # Back-translation draws its 4-5 paraphrases from this list (cycling/sampling), not
-# uniformly at random across all 10 personas.
+# uniformly at random across all 11 personas.
 ARCHETYPE_PERSONAS = {
     # Tier 1
     "t1_count_patients_with_condition": ["physician", "population_health_analyst", "hospital_ceo"],

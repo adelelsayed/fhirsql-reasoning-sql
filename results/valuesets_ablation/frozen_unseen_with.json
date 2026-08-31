@@ -1,0 +1,16 @@
+{
+  "gen_exact_match": 0.0,
+  "gen_structure_match": 0.0,
+  "gen_exec_match": 0.6077922077922078,
+  "gen_abstention_precision": 0.9653846153846154,
+  "gen_abstention_recall": 0.7050561797752809,
+  "gen_efficiency_speedup": 0.08406294526296901,
+  "gen_hardcoded_rate": 0.0,
+  "state": "frozen",
+  "seed": null,
+  "arm": "unseen",
+  "condition": "with",
+  "n_sample": 750,
+  "schema_ddl_chars": 6658,
+  "elapsed_s": 2830.4
+}

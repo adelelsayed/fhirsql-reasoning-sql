@@ -10,6 +10,10 @@ not just the one concept used in batch 1.
 
 `clean_concept()` strips the FHIR-style trailing qualifier ("(disorder)",
 "(finding)", "(procedure)", etc.) that isn't natural in a spoken question.
+Coverage is incomplete: the pattern below omits some SNOMED semantic tags that
+occur in the selected concepts, so a few questions retain "(observable entity)",
+"(morphologic abnormality)" or "(qualifier value)". Parentheticals genuinely
+part of a concept name (e.g. "(GAD-7)", "(PRP-OMP)") are correctly left alone.
 """
 import re
 

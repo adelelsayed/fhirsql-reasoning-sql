@@ -28,6 +28,35 @@ Every coded field in the schema (`code`/`system`/`display` triples across condit
 
 ---
 
+## Text-to-SQL and clinical question answering
+
+The task literature this study sits in. See PAPER.md Section 1.4 for how this work relates to each.
+
+**General text-to-SQL**
+
+- **Zhong V, Xiong C, Socher R.** Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning. *arXiv:1709.00103*, 2017. — WikiSQL, and the earliest execution-reward RL for text-to-SQL.
+- **Yu T, Zhang R, Yang K, et al.** Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task. *EMNLP 2018*. arXiv:1809.08887. — The standard cross-domain benchmark.
+- **Li J, Hui B, Qu G, et al.** Can LLM Already Serve as A Database Interface? A BIg Bench for Large-Scale Database Grounded Text-to-SQLs (BIRD). *NeurIPS 2023 Datasets & Benchmarks*. arXiv:2305.03111. — Adds execution efficiency and dirty values to evaluation.
+- **Wang C, Huang P, Polozov A, Brockschmidt M, Singh R.** Execution-Guided Neural Program Decoding. *ICML 2018 Workshop (NAMPI)*. arXiv:1807.03100.
+- **Scholak T, Schucher N, Bahdanau D.** PICARD: Parsing Incrementally for Constrained Auto-Regressive Decoding from Language Models. *EMNLP 2021*. arXiv:2109.05093. — Constrained decoding baseline; not used here.
+
+**Intermediate representations and decomposition**
+
+- **Guo J, Zhan Z, Gao Y, et al.** Towards Complex Text-to-SQL in Cross-Domain Database with Intermediate Representation (IRNet/SemQL). *ACL 2019*. arXiv:1905.08205.
+- **Wang B, Shin R, Liu X, Polozov O, Richardson M.** RAT-SQL: Relation-Aware Schema Encoding and Linking for Text-to-SQL Parsers. *ACL 2020*. arXiv:1911.04942.
+- **Gan Y, Chen X, Xie J, et al.** Natural SQL: Making SQL Easier to Infer from Natural Language Specifications. *Findings of EMNLP 2021*. arXiv:2109.05153.
+- **Pourreza M, Rafiei D.** DIN-SQL: Decomposed In-Context Learning of Text-to-SQL with Self-Correction. *NeurIPS 2023*. arXiv:2304.11015.
+- **Gao D, Wang H, Li Y, et al.** Text-to-SQL Empowered by Large Language Models: A Benchmark Evaluation (DAIL-SQL). *VLDB 2024*. arXiv:2308.15363.
+
+**Clinical text-to-SQL and cohort querying**
+
+- **Wang P, Shi T, Reddy CK.** Text-to-SQL Generation for Question Answering on Electronic Medical Records (MIMICSQL/TREQS). *WWW 2020*. arXiv:1908.01839. — Clinical text-to-SQL over MIMIC-III; gold SQL resolves concepts via dictionary-table matching.
+- **Lee G, Hwang H, Bae S, et al.** EHRSQL: A Practical Text-to-SQL Benchmark for Electronic Health Records. *NeurIPS 2022 Datasets & Benchmarks*. — Establishes unanswerable questions as a first-class benchmark component.
+- **Lee G, Kweon S, Bae S, Choi E.** TrustSQL: Benchmarking Text-to-SQL Reliability with Penalty-Based Scoring. *arXiv:2403.15879*, 2024. — Reliability-aware evaluation where abstention is scored explicitly.
+- **Yuan C, Ryan PB, Ta C, et al.** Criteria2Query: a natural language interface to clinical databases for cohort definition. *JAMIA*, 2019;26(4):294-305. DOI: [10.1093/jamia/ocy178](https://doi.org/10.1093/jamia/ocy178)
+
+---
+
 ## Infrastructure
 
 **Raasveldt M, Mühleisen H.** DuckDB: an Embeddable Analytical Database. In *Proceedings of the 2019 International Conference on Management of Data* (SIGMOD '19), pp. 1981-1984. DOI: [10.1145/3299869.3320212](https://doi.org/10.1145/3299869.3320212)

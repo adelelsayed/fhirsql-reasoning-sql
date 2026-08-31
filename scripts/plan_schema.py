@@ -208,10 +208,11 @@ compiled SQL:
 
     WITH resolved AS (
         SELECT code, code_system FROM valuesets
-        WHERE table_name = 'procedure' AND display ILIKE '%Biopsy of breast (procedure)%'
+        WHERE table_name = 'condition' AND display ILIKE '%Essential hypertension (disorder)%'
     )
-    SELECT DISTINCT patient_id
-    FROM procedure, resolved
-    WHERE procedure.code = resolved.code AND procedure.system = resolved.code_system
-      AND status = 'completed'
+    SELECT p.gender, COUNT(DISTINCT c.patient_id) AS patient_count
+    FROM condition c
+    JOIN patient p ON c.patient_id = p.id
+    JOIN resolved r ON c.code = r.code AND c.system = r.code_system
+    GROUP BY p.gender
 """
