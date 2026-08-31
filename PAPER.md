@@ -456,6 +456,15 @@ Nothing about the recipe is specific to FHIR. Any domain with a normalized schem
 
 Everything needed is committed: corpus generation and verification scripts (`scripts/`), the frozen schema (`schema/schema.sql`), assembled datasets (`data/training/`), both training notebooks configured exactly as run, the `valuesets` ablation notebook, and all per-seed training logs, evaluation summaries, and failure logs (`results/`). Adapter weights are on Hugging Face (`MODEL_CARD.md`). `METHODOLOGY_LOG.md` records the dated development history, including bugs found and fixed — notably floating-point non-determinism in DuckDB's parallel `AVG()` aggregation and non-deterministic `ORDER BY` tiebreaks, both of which silently corrupted correctness measurement until traced and eliminated.
 
+## Data and code availability
+
+- **Code, paper, and results:** https://github.com/adelelsayed/fhirsql-reasoning-sql
+- **Archived release (DOI):** [10.5281/zenodo.22194576](https://doi.org/10.5281/zenodo.22194576) (concept DOI [10.5281/zenodo.22194575](https://doi.org/10.5281/zenodo.22194575) resolves to the latest version)
+- **Fine-tuned adapters:** https://huggingface.co/adelelsayed1991/fhirsql-reasoning-sql-adapters
+- **Datasets:** https://huggingface.co/datasets/adelelsayed1991/fhirsql-reasoning-sql
+
+All data is synthetic (Synthea); no real patient data was used at any stage.
+
 ## Acknowledgments
 
 The research design, pipeline architecture, and all experimental and interpretive decisions are the author's. Core components — including the trainer structure and checkpoint/resume pattern, the `FHIRSQLLLM` model-wrapper design, the evaluation and reward architecture, the two-arm benchmark design, and the corpus and schema design — were specified by the author and, in several cases, written by the author directly. Claude Code (Anthropic) was used as an implementation assistant under the author's direction: filling in parts of the pipeline to the author's specification, drafting the 160 seed question phrasings (reviewed by the author), assisting with data analysis, and helping draft this paper. All results, interpretations, and conclusions are the author's own.

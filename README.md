@@ -1,6 +1,12 @@
 # Plan-Then-Compile: Turning a General-Purpose Coder Model into a FHIR Data Analyst
 
-A frozen `Qwen2.5-Coder-14B-Instruct` is effectively unusable as an analyst over a FHIR-derived clinical database: asked ordinary hospital questions, it returns the right answer about one time in ten, never reproduces a correct query verbatim, and refuses unanswerable questions barely better than chance. This study takes that model to a working analyst — 100% execution correctness on a disjoint held-out patient population, 89.1% on clinical concepts it was never trained on — with a single supervised fine-tuning pass on a synthetic (Synthea) corpus.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22194576.svg)](https://doi.org/10.5281/zenodo.22194576)
+[![License: Apache-2.0](https://img.shields.io/badge/code-Apache--2.0-blue.svg)](LICENSE)
+[![License: CC BY 4.0](https://img.shields.io/badge/paper%20%26%20data-CC--BY--4.0-lightgrey.svg)](LICENSE)
+
+**[Paper](PAPER.md)** · **[Adapters](https://huggingface.co/adelelsayed1991/fhirsql-reasoning-sql-adapters)** · **[Dataset](https://huggingface.co/datasets/adelelsayed1991/fhirsql-reasoning-sql)** · **[Zenodo](https://doi.org/10.5281/zenodo.22194576)**
+
+A frozen `Qwen2.5-Coder-14B-Instruct` is not a usable analyst over a FHIR-derived clinical database: even handed a complete schema description it answers about a third of familiar-concept questions correctly, never reproduces a correct query verbatim, refuses unanswerable questions unreliably, and writes queries 4.5–12× slower than gold. This study takes that model to a working analyst — 100% execution correctness on a disjoint held-out patient population, 89.1% on clinical concepts it was never trained on — with a single supervised fine-tuning pass on a synthetic (Synthea) corpus.
 
 Two design decisions carry the result. Each training target is a **structured JSON query plan followed by the compiled SQL**, so the model commits to which clinical entities the question names and which query archetype it implies *before* writing SQL — making its reasoning inspectable. And clinical terminology is **resolved through the database**: gold SQL never embeds a literal SNOMED/ICD-10/RxNorm code, resolving concepts instead through a lookup against a `valuesets` table, so competence transfers to concepts never seen in training rather than depending on memorized codes.
 

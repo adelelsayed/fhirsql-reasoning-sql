@@ -8,12 +8,14 @@ license:
   - Apache-2.0
   - CC-BY-4.0
 repository-code: "https://github.com/adelelsayed/fhirsql-reasoning-sql"
+doi: "10.5281/zenodo.22194576"
 abstract: >-
-  A frozen Qwen2.5-Coder-14B-Instruct is effectively unusable as an analyst over
-  a FHIR-derived clinical database: asked ordinary hospital questions it returns
-  the right answer roughly one time in ten on familiar clinical concepts, never
-  reproduces a correct query verbatim, and refuses unanswerable questions barely
-  better than chance. This study takes that model to a working analyst.
+  A frozen Qwen2.5-Coder-14B-Instruct is not a usable analyst over a FHIR-derived
+  clinical database: even given a complete schema description it answers roughly
+  a third of familiar-concept questions correctly and three-fifths on rarer ones,
+  never reproduces a correct query verbatim, refuses unanswerable questions
+  unreliably in both directions, and writes queries 4.5-12x slower than gold.
+  This study takes that model to a working analyst.
   Fine-tuning with DoRA on 10,696 examples (9,680 with execution-verified gold
   SQL plus 1,016 unanswerable questions) raises execution correctness on a
   disjoint held-out patient population to 100.0%, and on clinical concepts
@@ -56,6 +58,18 @@ identifiers:
   - type: url
     value: "https://github.com/adelelsayed/fhirsql-reasoning-sql"
     description: Source code repository
+  - type: doi
+    value: "10.5281/zenodo.22194576"
+    description: Zenodo archive (v1.0.0)
+  - type: doi
+    value: "10.5281/zenodo.22194575"
+    description: Zenodo concept DOI (all versions)
+  - type: url
+    value: "https://huggingface.co/adelelsayed1991/fhirsql-reasoning-sql-adapters"
+    description: Fine-tuned DoRA adapters
+  - type: url
+    value: "https://huggingface.co/datasets/adelelsayed1991/fhirsql-reasoning-sql"
+    description: Training and held-out benchmark datasets
 references:
   - type: article
     title: "Synthea: An approach, method, and software mechanism for generating synthetic patients and the synthetic electronic health care record"

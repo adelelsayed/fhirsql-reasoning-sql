@@ -44,3 +44,6 @@ hf_staging/
 
 # Working notes, not part of the publication.
 notes/
+# HF upload staging -- byte-identical duplicate of data/training + schema,
+# assembled only for pushing to the Hugging Face dataset repo.
+hf_dataset_staging/
